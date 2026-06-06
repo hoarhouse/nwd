@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("isoDate", function(dateObj) {
+    return new Date(dateObj).toISOString().slice(0, 10);
+  });
+
   return {
     dir: {
       input: "src",

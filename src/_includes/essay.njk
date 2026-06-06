@@ -12,7 +12,7 @@ layout: base.njk
     {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
     <p class="essay-meta">
       {% if author %}<span class="essay-author">{{ author }}</span>{% endif %}
-      {% if date %}<time datetime="{{ page.date }}">{{ date | dateDisplay }}</time>{% endif %}
+      {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
     </p>
   </header>
   <div class="essay-body">
