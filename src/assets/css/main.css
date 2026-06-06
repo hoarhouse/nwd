@@ -88,3 +88,13 @@ h1, h2, h3, h4 {
   .essay-dek { font-size: 1.1rem; }
   .essay-body { font-size: 1.05rem; }
 }
+
+/* ---- card list (for essay index pages) ---- */
+.card-list { margin: 2rem 0; }
+.card { padding: 1.5rem 0; border-bottom: 1px solid var(--color-rule); }
+.card:first-child { padding-top: 0; }
+.card h2 { font-size: 1.45rem; margin: 0 0 0.5rem; }
+.card h2 a { color: var(--color-text); text-decoration: none; }
+.card h2 a:hover { color: var(--color-accent); }
+.card p { color: var(--color-muted); margin: 0 0 0.5rem; line-height: 1.5; }
+.card time { font-size: 0.85rem; color: var(--color-muted); }

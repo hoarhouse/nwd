@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Writing
+summary: Essays and reflections from the Domus Communis Foundation.
+---
+<div class="section-head">
+  <h1>Writing</h1>
+  <p class="section-dek">Essays and reflections on technology, conscience, and the human person.</p>
+</div>
+<ul class="card-list">
+{% for essay in collections.essays | reverse %}
+  <li class="card">
+    <a class="card-link" href="{{ essay.url }}">
+      {% if essay.data.hero %}<div class="card-thumb"><img src="{{ essay.data.hero }}" alt=""></div>{% endif %}
+      <div class="card-text">
+        <h2 class="card-title">{{ essay.data.title }}</h2>
+        {% if essay.data.summary %}<p class="card-dek">{{ essay.data.summary }}</p>{% endif %}
+        {% if essay.data.date %}<p class="card-meta"><time datetime="{{ essay.data.date | isoDate }}">{{ essay.data.date | dateDisplay }}</time></p>{% endif %}
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>
