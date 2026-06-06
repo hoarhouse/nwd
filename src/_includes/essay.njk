@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+<article class="essay">
+  {% if hero %}
+  <figure class="essay-hero">
+    <img src="{{ hero }}" alt="{{ title }}">
+  </figure>
+  {% endif %}
+  <header class="essay-header">
+    <h1 class="essay-title">{{ title }}</h1>
+    {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
+    <p class="essay-meta">
+      {% if author %}<span class="essay-author">{{ author }}</span>{% endif %}
+      {% if date %}<time datetime="{{ page.date }}">{{ date | dateDisplay }}</time>{% endif %}
+    </p>
+  </header>
+  <div class="essay-body">
+    {{ content | safe }}
+  </div>
+  {% if tags %}
+  <footer class="essay-tags">
+    {% for tag in tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </footer>
+  {% endif %}
+</article>

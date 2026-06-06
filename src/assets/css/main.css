@@ -40,3 +40,51 @@ footer.site-footer {
   color: var(--color-muted);
   font-size: 0.85rem;
 }
+
+/* ---- single accent (provisional — change here to restyle site-wide) ---- */
+:root { --color-accent: #11696b; }
+
+/* ---- serif headings ---- */
+h1, h2, h3, h4 {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* ---- essay layout ---- */
+.essay-hero { margin: 0 0 2rem; }
+.essay-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-radius: 3px; }
+
+.essay-header { margin-bottom: 2.5rem; }
+.essay-title { font-size: 2.6rem; margin: 0 0 1rem; }
+.essay-dek { font-family: var(--font-sans); font-size: 1.25rem; line-height: 1.45; color: var(--color-muted); margin: 0 0 1.25rem; }
+.essay-meta { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-muted); margin: 0; }
+.essay-meta .essay-author { font-weight: 600; color: var(--color-text); }
+.essay-meta time::before { content: "·"; margin: 0 0.5rem; }
+
+.essay-body { font-size: 1.125rem; line-height: 1.75; }
+.essay-body p { margin: 0 0 1.5rem; }
+.essay-body h2 { font-size: 1.7rem; margin: 2.75rem 0 1rem; }
+.essay-body h3 { font-size: 1.3rem; margin: 2.25rem 0 0.75rem; }
+.essay-body a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px; }
+.essay-body ul, .essay-body ol { margin: 0 0 1.5rem; padding-left: 1.5rem; }
+.essay-body li { margin: 0 0 0.5rem; }
+.essay-body figure { margin: 2.5rem 0; }
+.essay-body figure img { width: 100%; display: block; border-radius: 3px; }
+.essay-body figcaption { font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-muted); text-align: center; margin-top: 0.6rem; }
+.essay-body blockquote { margin: 2.5rem 0; padding: 0 0 0 1.5rem; border-left: 3px solid var(--color-accent); font-family: "Source Serif 4", Georgia, serif; font-size: 1.45rem; line-height: 1.4; font-style: italic; }
+.essay-body blockquote p { margin: 0; }
+
+/* responsive video / iframe embeds (wrap any iframe in <div class="embed">) */
+.embed { position: relative; padding-bottom: 56.25%; height: 0; margin: 2.5rem 0; overflow: hidden; border-radius: 3px; }
+.embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+.essay-tags { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
+.essay-tags .tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-muted); background: #f0efe8; padding: 0.3rem 0.7rem; border-radius: 999px; margin: 0 0.4rem 0.4rem 0; }
+
+@media (max-width: 600px) {
+  .essay-title { font-size: 2rem; }
+  .essay-dek { font-size: 1.1rem; }
+  .essay-body { font-size: 1.05rem; }
+}
