@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Events
+summary: Gatherings, dialogues, and convenings of the Domus Communis Foundation.
+---
+<div class="section-head">
+  <h1>Events</h1>
+  <p class="section-dek">Gatherings, dialogues, and convenings — past and upcoming.</p>
+</div>
+
+{% set upcoming = [] %}
+{% set past = [] %}
+{% for event in collections.events %}
+  {% if event.data.eventDate | isPast %}
+    {% set past = (past.push(event), past) %}
+  {% else %}
+    {% set upcoming = (upcoming.push(event), upcoming) %}
+  {% endif %}
+{% endfor %}
+
+{% if upcoming.length %}
+<section class="events-group">
+  <h2 class="events-group-heading">Upcoming</h2>
+  <ul class="card-list">
+  {% for event in upcoming | sort(false, false, "data.eventDate") %}
+    <li class="card">
+      <a class="card-link card-link-event" href="{{ event.url }}">
+        <div class="card-text">
+          <p class="card-eventdate">{% if event.data.eventDate %}<time datetime="{{ event.data.eventDate | isoDate }}">{{ event.data.eventDate | dateDisplay }}</time>{% endif %}</p>
+          <h3 class="card-title">{{ event.data.title }}</h3>
+          {% if event.data.subtitle %}<p class="card-dek">{{ event.data.subtitle }}</p>{% endif %}
+          {% if event.data.location %}<p class="card-meta">{{ event.data.location }}</p>{% endif %}
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if past.length %}
+<section class="events-group">
+  <h2 class="events-group-heading">Past</h2>
+  <ul class="card-list">
+  {% for event in past | sort(true, false, "data.eventDate") %}
+    <li class="card">
+      <a class="card-link card-link-event" href="{{ event.url }}">
+        <div class="card-text">
+          <p class="card-eventdate">{% if event.data.eventDate %}<time datetime="{{ event.data.eventDate | isoDate }}">{{ event.data.eventDate | dateDisplay }}</time>{% endif %}</p>
+          <h3 class="card-title">{{ event.data.title }}</h3>
+          {% if event.data.subtitle %}<p class="card-dek">{{ event.data.subtitle }}</p>{% endif %}
+          {% if event.data.location %}<p class="card-meta">{{ event.data.location }}</p>{% endif %}
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
