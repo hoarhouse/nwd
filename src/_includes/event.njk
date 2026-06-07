@@ -3,47 +3,53 @@ layout: base.njk
 ---
 <article class="event">
   {% if series %}<p class="event-series">{{ series }}</p>{% endif %}
-  {% if partner %}<p class="event-partner">In collaboration with {{ partner }}</p>{% endif %}
+  {% if partner %}<p class="event-partner">{{ partner }}</p>{% endif %}
   <header class="event-header">
     <h1 class="event-title">{{ title }}</h1>
     {% if subtitle %}<p class="event-subtitle">{{ subtitle }}</p>{% endif %}
     <p class="event-when">
-      {% if eventDate %}<time datetime="{{ eventDate | isoDate }}">{{ eventDate | dateDisplay }}</time>{% endif %}
-      {% if timeLabel %}<span class="event-time">{{ timeLabel }}</span>{% endif %}
+      <time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>
+      {% if eventTime %}<span class="event-time">{{ eventTime }}</span>{% endif %}
     </p>
     {% if location %}
     <p class="event-where">
-      {% if mapUrl %}<a href="{{ mapUrl }}">{{ location }}</a>{% else %}{{ location }}{% endif %}
+      {% if locationUrl %}<a href="{{ locationUrl }}">{{ location }}</a>{% else %}{{ location }}{% endif %}
     </p>
     {% endif %}
-    {% if eventDate %}
-      {% if eventDate | isPast %}
-      <p class="event-status event-status-past">This event has taken place. A recap follows below.</p>
+    {% if registrationUrl %}
+    <p class="event-register">
+      <a class="button" href="{{ registrationUrl }}">Register</a>
+    </p>
+    {% endif %}
+    {% if date | isPast %}
+      {% if registrationUrl %}
+      <p class="event-status event-status-past">Registration for this event is closed.</p>
       {% else %}
-      <p class="event-register">
-        {% if registerEmail %}<a class="event-register-link" href="mailto:{{ registerEmail }}?subject=Registration%20%E2%80%94%20{{ title }}">Register to attend</a>{% endif %}
-      </p>
+      <p class="event-status event-status-past">This event has taken place. A recap follows below.</p>
       {% endif %}
     {% endif %}
   </header>
   <div class="event-body">
     {{ content | safe }}
   </div>
-  {% if speakers %}
+  {% if speakers and speakers.length > 0 %}
   <section class="event-speakers">
     <h2 class="event-speakers-heading">Featured Contributions</h2>
     {% for speaker in speakers %}
     <div class="speaker">
-      {% if speaker.photos %}
+      <div class="speaker-head">
+        {% if speaker.headshot %}<img class="avatar" src="{{ speaker.headshot }}" alt="{{ speaker.name }}">{% endif %}
+        <div class="speaker-head-text">
+          <h3 class="speaker-name">{{ speaker.name }}</h3>
+          {% if speaker.talk %}<p class="speaker-talk">{{ speaker.talk }}</p>{% endif %}
+          {% if speaker.bio %}<p class="speaker-bio">{{ speaker.bio }}</p>{% endif %}
+        </div>
+      </div>
+      {% if speaker.photos and speaker.photos.length > 0 %}
       <div class="speaker-photos">
         {% for photo in speaker.photos %}<img src="{{ photo }}" alt="{{ speaker.name }}">{% endfor %}
       </div>
       {% endif %}
-      <div class="speaker-text">
-        <h3 class="speaker-name">{{ speaker.name }}</h3>
-        {% if speaker.talk %}<p class="speaker-talk">{{ speaker.talk }}</p>{% endif %}
-        {% if speaker.bio %}<p class="speaker-bio">{{ speaker.bio }}</p>{% endif %}
-      </div>
     </div>
     {% endfor %}
   </section>

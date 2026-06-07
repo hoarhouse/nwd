@@ -318,8 +318,11 @@ h1, h2, h3, h4 {
 /* ---- event speakers ---- */
 .event-speakers { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
 .event-speakers-heading { font-size: 1.7rem; margin: 0 0 1.75rem; }
-.speaker { margin-bottom: 3rem; }
-.speaker-photos { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.speaker { margin-bottom: 3.5rem; }
+.speaker-head { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+.avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: #f0efe8; display: block; }
+.speaker-head-text { flex: 1; }
+.speaker-photos { display: flex; flex-direction: column; gap: 0.5rem; }
 .speaker-photos img { width: 100%; height: auto; border-radius: 4px; display: block; background: #f0efe8; }
 .speaker-name { font-size: 1.25rem; margin: 0 0 0.3rem; line-height: 1.25; }
 .speaker-talk { font-family: var(--font-sans); font-style: italic; color: var(--color-accent); font-size: 0.95rem; margin: 0 0 0.6rem; }

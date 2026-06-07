@@ -10,16 +10,16 @@ summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and valu
 {% set upcoming = [] %}
 {% set past = [] %}
 {% for event in collections.events %}
-  {% if event.data.eventDate | isPast %}{% set past = (past.push(event), past) %}{% else %}{% set upcoming = (upcoming.push(event), upcoming) %}{% endif %}
+  {% if event.data.date | isPast %}{% set past = (past.push(event), past) %}{% else %}{% set upcoming = (upcoming.push(event), upcoming) %}{% endif %}
 {% endfor %}
 {% set featuredEvent = null %}
-{% if upcoming.length %}{% set featuredEvent = (upcoming | sort(false, false, "data.eventDate"))[0] %}{% elif past.length %}{% set featuredEvent = (past | sort(true, false, "data.eventDate"))[0] %}{% endif %}
+{% if upcoming.length %}{% set featuredEvent = (upcoming | sort(false, false, "data.date"))[0] %}{% elif past.length %}{% set featuredEvent = (past | sort(true, false, "data.date"))[0] %}{% endif %}
 
 {% if featuredEvent %}
 <section class="home-section">
   <h2 class="home-section-heading"><a href="/events/">Events</a></h2>
   <a class="home-event" href="{{ featuredEvent.url }}">
-    <p class="card-eventdate"><time datetime="{{ featuredEvent.data.eventDate | isoDate }}">{{ featuredEvent.data.eventDate | dateDisplay }}</time></p>
+    <p class="card-eventdate"><time datetime="{{ featuredEvent.data.date | isoDate }}">{{ featuredEvent.data.date | dateDisplay }}</time></p>
     <h3 class="home-event-title">{{ featuredEvent.data.title }}</h3>
     {% if featuredEvent.data.subtitle %}<p class="card-dek">{{ featuredEvent.data.subtitle }}</p>{% endif %}
   </a>

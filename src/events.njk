@@ -11,7 +11,7 @@ summary: Gatherings, dialogues, and convenings of the Domus Communis Foundation.
 {% set upcoming = [] %}
 {% set past = [] %}
 {% for event in collections.events %}
-  {% if event.data.eventDate | isPast %}
+  {% if event.data.date | isPast %}
     {% set past = (past.push(event), past) %}
   {% else %}
     {% set upcoming = (upcoming.push(event), upcoming) %}
@@ -22,11 +22,11 @@ summary: Gatherings, dialogues, and convenings of the Domus Communis Foundation.
 <section class="events-group">
   <h2 class="events-group-heading">Upcoming</h2>
   <ul class="card-list">
-  {% for event in upcoming | sort(false, false, "data.eventDate") %}
+  {% for event in upcoming | sort(false, false, "data.date") %}
     <li class="card">
       <a class="card-link card-link-event" href="{{ event.url }}">
         <div class="card-text">
-          <p class="card-eventdate">{% if event.data.eventDate %}<time datetime="{{ event.data.eventDate | isoDate }}">{{ event.data.eventDate | dateDisplay }}</time>{% endif %}</p>
+          <p class="card-eventdate">{% if event.data.date %}<time datetime="{{ event.data.date | isoDate }}">{{ event.data.date | dateDisplay }}</time>{% endif %}</p>
           <h3 class="card-title">{{ event.data.title }}</h3>
           {% if event.data.subtitle %}<p class="card-dek">{{ event.data.subtitle }}</p>{% endif %}
           {% if event.data.location %}<p class="card-meta">{{ event.data.location }}</p>{% endif %}
@@ -42,11 +42,11 @@ summary: Gatherings, dialogues, and convenings of the Domus Communis Foundation.
 <section class="events-group">
   <h2 class="events-group-heading">Past</h2>
   <ul class="card-list">
-  {% for event in past | sort(true, false, "data.eventDate") %}
+  {% for event in past | sort(true, false, "data.date") %}
     <li class="card">
       <a class="card-link card-link-event" href="{{ event.url }}">
         <div class="card-text">
-          <p class="card-eventdate">{% if event.data.eventDate %}<time datetime="{{ event.data.eventDate | isoDate }}">{{ event.data.eventDate | dateDisplay }}</time>{% endif %}</p>
+          <p class="card-eventdate">{% if event.data.date %}<time datetime="{{ event.data.date | isoDate }}">{{ event.data.date | dateDisplay }}</time>{% endif %}</p>
           <h3 class="card-title">{{ event.data.title }}</h3>
           {% if event.data.subtitle %}<p class="card-dek">{{ event.data.subtitle }}</p>{% endif %}
           {% if event.data.location %}<p class="card-meta">{{ event.data.location }}</p>{% endif %}
