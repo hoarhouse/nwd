@@ -37,13 +37,15 @@ summary: "Domus Communis Foundation — a global constellation of nonprofits adv
     <h3 class="team-group-name">{{ grp.group }}</h3>
     <div class="team-grid">
       {% for person in grp.people %}
-      <div class="team-member">
-        {% if person.photo %}<img class="avatar" src="{{ person.photo }}" alt="{{ person.name }}">{% else %}<div class="avatar avatar-initials">{{ person.initials }}</div>{% endif %}
-        <div class="team-member-text">
-          <p class="team-member-name">{{ person.name }}</p>
-          {% if person.role %}<p class="team-member-role">{{ person.role }}</p>{% endif %}
-          {% if person.bio %}<p class="team-member-bio">{{ person.bio }}</p>{% endif %}
+      <div class="team-member{% if person.bio %} team-member-featured{% endif %}">
+        <div class="team-member-head">
+          {% if person.photo %}<img class="avatar" src="{{ person.photo }}" alt="{{ person.name }}">{% else %}<div class="avatar avatar-initials">{{ person.initials }}</div>{% endif %}
+          <div class="team-member-text">
+            <p class="team-member-name">{{ person.name }}</p>
+            {% if person.role %}<p class="team-member-role">{{ person.role }}</p>{% endif %}
+          </div>
         </div>
+        {% if person.bio %}<p class="team-member-bio">{{ person.bio }}</p>{% endif %}
       </div>
       {% endfor %}
     </div>

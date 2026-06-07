@@ -370,7 +370,9 @@ h1, h2, h3, h4 {
 .team-group { margin-bottom: 2.5rem; }
 .team-group-name { font-size: 1.25rem; margin: 0 0 1rem; color: var(--color-accent); }
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.5rem 1.25rem; }
-.team-member { display: flex; gap: 0.75rem; align-items: center; }
+.team-member-head { display: flex; gap: 0.75rem; align-items: center; }
+.team-member-featured { grid-column: 1 / -1; }
+.team-member-featured .team-member-bio { margin-top: 0.75rem; max-width: 42rem; }
 .avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; display: block; }
 .avatar-initials { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; line-height: 1; color: var(--color-muted); background: #ece9df; border-radius: 50%; flex-shrink: 0; }
 .team-member-text { flex: 1; }
