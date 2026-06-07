@@ -58,6 +58,7 @@ header.site-header {
   font-size: 0.95rem;
   cursor: default;
 }
+.nav-home { display: none; }
 
 footer.site-footer {
   margin-top: 3rem;
@@ -270,6 +271,7 @@ h1, h2, h3, h4 {
   body.nav-open .site-nav { transform: translateX(0); }
 
   .site-nav a, .site-nav .nav-soon { font-size: 1.1rem; }
+  .nav-home { display: block; }
   .site-nav .nav-soon em {
     font-style: normal;
     font-size: 0.65rem;
