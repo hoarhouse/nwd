@@ -314,3 +314,18 @@ h1, h2, h3, h4 {
 .event-body h3 { font-size: 1.3rem; margin: 2.25rem 0 0.75rem; }
 .event-back { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
 .event-back a { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent); text-decoration: none; }
+
+/* ---- event speakers ---- */
+.event-speakers { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
+.event-speakers-heading { font-size: 1.7rem; margin: 0 0 1.75rem; }
+.speaker { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; margin-bottom: 2rem; align-items: start; }
+.speaker-photo { width: 120px; height: 120px; border-radius: 4px; overflow: hidden; background: #f0efe8; display: flex; align-items: center; justify-content: center; }
+.speaker-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.speaker-photo-placeholder { font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #b8b5ac; }
+.speaker-name { font-size: 1.25rem; margin: 0 0 0.3rem; line-height: 1.25; }
+.speaker-talk { font-family: var(--font-sans); font-style: italic; color: var(--color-accent); font-size: 0.95rem; margin: 0 0 0.6rem; }
+.speaker-bio { font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.55; color: var(--color-text); margin: 0; }
+@media (max-width: 600px) {
+  .speaker { grid-template-columns: 80px 1fr; gap: 1rem; }
+  .speaker-photo { width: 80px; height: 80px; }
+}
