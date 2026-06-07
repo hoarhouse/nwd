@@ -59,3 +59,7 @@ For the first time, a local community became the place where global conversation
 Looking back, the May 7 gathering appears less as a standalone event and more as the beginning of a broader journey. The questions raised that evening continued through the international gathering of May 24, through subsequent institutional dialogues, and through an expanding network of communities seeking to understand their role in shaping the future.
 
 The conversation had begun. And it continues.
+
+## Test Video (temporary)
+
+<div class="embed embed-landscape"><iframe src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Test video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
