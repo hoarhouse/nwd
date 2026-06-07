@@ -6,7 +6,15 @@ layout: base.njk
     {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
   </p>
   {% if title %}<h1 class="np-title">{{ title }}</h1>{% endif %}
-  {% if media %}
+  {% if embed %}
+  <div class="embed-wrap {% if orientation == 'vertical' %}embed-vertical{% else %}embed-landscape{% endif %}">
+    {% if embed == "youtube" %}
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ embedId }}" title="{{ title or 'Embedded video' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% elif embed == "vimeo" %}
+    <iframe src="https://player.vimeo.com/video/{{ embedId }}" title="{{ title or 'Embedded video' }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    {% endif %}
+  </div>
+  {% elif media %}
   <div class="media">
     {% if mediaType == "video" %}
     <video class="media-item" controls preload="metadata"{% if poster %} poster="{{ poster }}"{% endif %}>
