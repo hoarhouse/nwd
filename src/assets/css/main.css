@@ -318,15 +318,13 @@ h1, h2, h3, h4 {
 /* ---- event speakers ---- */
 .event-speakers { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
 .event-speakers-heading { font-size: 1.7rem; margin: 0 0 1.75rem; }
-.speaker { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; margin-bottom: 2rem; align-items: start; }
-.speaker-photos { display: flex; flex-direction: column; gap: 0.4rem; }
-.speaker-photos img { width: 120px; height: 90px; object-fit: cover; border-radius: 4px; display: block; background: #f0efe8; }
+.speaker { margin-bottom: 3rem; }
+.speaker-photos { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.speaker-photos img { width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 4px; display: block; background: #f0efe8; }
 .speaker-name { font-size: 1.25rem; margin: 0 0 0.3rem; line-height: 1.25; }
 .speaker-talk { font-family: var(--font-sans); font-style: italic; color: var(--color-accent); font-size: 0.95rem; margin: 0 0 0.6rem; }
 .speaker-bio { font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.55; color: var(--color-text); margin: 0; }
 @media (max-width: 600px) {
-  .speaker { grid-template-columns: 80px 1fr; gap: 1rem; }
-  .speaker-photo { width: 80px; height: 80px; }
 }
 
 /* ---- events listing ---- */
