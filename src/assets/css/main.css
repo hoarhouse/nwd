@@ -135,3 +135,18 @@ h1, h2, h3, h4 {
 /* ---- newsroom media (native shapes, no cropping) ---- */
 .media { margin: 0 0 1rem; }
 .media-item { display: block; margin: 0 auto; max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: 4px; background: #f0efe8; }
+
+/* On phones: media breaks out to full screen width; text keeps its margins */
+@media (max-width: 600px) {
+  .media {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    margin-bottom: 1rem;
+  }
+  .media-item {
+    width: 100%;
+    max-height: none;
+    border-radius: 0;
+  }
+}
