@@ -183,3 +183,14 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .carousel-dots { bottom: 1rem; }
 }
+
+/* ---- carousel arrow refinements ---- */
+/* Desktop: arrows hidden until hover, gentle fade */
+.carousel-arrow { opacity: 0; transition: opacity 0.2s ease; }
+.carousel:hover .carousel-arrow { opacity: 1; }
+.carousel-arrow:focus-visible { opacity: 1; }
+
+/* Phone: no arrows at all (dots + swipe only) */
+@media (max-width: 600px) {
+  .carousel-arrow { display: none; }
+}
