@@ -160,11 +160,11 @@ h1, h2, h3, h4 {
   .embed-landscape, .embed-vertical { border-radius: 0; }
 }
 
-/* ---- gallery (multiple images, stacked — step 4a, no JS yet) ---- */
+/* ---- gallery (uniform 4:5, cropped to fit — step 4a) ---- */
 .gallery { margin: 0 0 1rem; }
-.gallery-item { display: block; margin: 0 auto 0.75rem; max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: 4px; background: #f0efe8; }
+.gallery-item { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; margin: 0 auto 0.75rem; border-radius: 4px; background: #f0efe8; }
 .gallery-item:last-child { margin-bottom: 0; }
 @media (max-width: 600px) {
   .gallery { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); width: 100vw; }
-  .gallery-item { width: 100%; max-height: none; border-radius: 0; }
+  .gallery-item { border-radius: 0; }
 }
