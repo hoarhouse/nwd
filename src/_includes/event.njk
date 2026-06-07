@@ -34,7 +34,11 @@ layout: base.njk
     <h2 class="event-speakers-heading">Featured Contributions</h2>
     {% for speaker in speakers %}
     <div class="speaker">
-      <div class="speaker-photo">{% if speaker.photo %}<img src="{{ speaker.photo }}" alt="{{ speaker.name }}">{% else %}<span class="speaker-photo-placeholder">Photo</span>{% endif %}</div>
+      {% if speaker.photos %}
+      <div class="speaker-photos">
+        {% for photo in speaker.photos %}<img src="{{ photo }}" alt="{{ speaker.name }}">{% endfor %}
+      </div>
+      {% endif %}
       <div class="speaker-text">
         <h3 class="speaker-name">{{ speaker.name }}</h3>
         {% if speaker.talk %}<p class="speaker-talk">{{ speaker.talk }}</p>{% endif %}
