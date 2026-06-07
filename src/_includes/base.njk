@@ -12,7 +12,16 @@
 </head>
 <body>
   <header class="site-header">
-    <a href="/">DCF Foundation</a>
+    <a class="site-brand" href="/">DCF Foundation</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/writing/">Writing</a>
+      <a href="/newsroom/">Newsroom</a>
+      <span class="nav-soon" aria-disabled="true">About</span>
+      <span class="nav-soon" aria-disabled="true">Events</span>
+      <span class="nav-soon" aria-disabled="true">Positions</span>
+      <span class="nav-soon" aria-disabled="true">Resources</span>
+      <span class="nav-soon" aria-disabled="true">Get Involved</span>
+    </nav>
   </header>
   <main>
     {{ content | safe }}
