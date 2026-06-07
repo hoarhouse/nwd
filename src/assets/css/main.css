@@ -400,3 +400,11 @@ h1, h2, h3, h4 {
 .initiative-desc { font-size: 1.05rem; line-height: 1.65; margin: 0 0 1rem; }
 .initiative-programs { font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.5; color: var(--color-text); margin: 0; padding-left: 1.25rem; }
 .initiative-programs li { margin: 0 0 0.4rem; }
+
+
+/* --- Publication + category kicker (Insights migration) --- */
+.essay-kicker { font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 0.9rem; }
+.essay-publication { color: var(--color-accent); font-weight: 600; }
+.essay-category { color: var(--color-muted); }
+.essay-publication + .essay-category::before { content: "\00B7"; margin: 0 0.5rem; color: var(--color-rule); }
+.card-kicker { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent); font-weight: 600; margin: 0 0 0.4rem; }

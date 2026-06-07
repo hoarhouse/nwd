@@ -8,6 +8,7 @@ layout: base.njk
   </figure>
   {% endif %}
   <header class="essay-header">
+    {% if publication or category %}<p class="essay-kicker">{% if publication %}<span class="essay-publication">{{ publication }}</span>{% endif %}{% if category %}<span class="essay-category">{{ category }}</span>{% endif %}</p>{% endif %}
     <h1 class="essay-title">{{ title }}</h1>
     {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
     <p class="essay-meta">
