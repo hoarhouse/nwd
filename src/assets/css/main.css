@@ -408,3 +408,10 @@ h1, h2, h3, h4 {
 .essay-category { color: var(--color-muted); }
 .essay-publication + .essay-category::before { content: "\00B7"; margin: 0 0.5rem; color: var(--color-rule); }
 .card-kicker { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent); font-weight: 600; margin: 0 0 0.4rem; }
+
+
+/* --- Essay author byline (Insights migration) --- */
+.essay-byline { display: flex; align-items: center; gap: 0.85rem; margin: 0; }
+.essay-byline-info { display: flex; flex-direction: column; line-height: 1.3; }
+.essay-byline .essay-author { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--color-text); }
+.essay-byline-detail { font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-muted); }

@@ -11,10 +11,15 @@ layout: base.njk
     {% if publication or category %}<p class="essay-kicker">{% if publication %}<span class="essay-publication">{{ publication }}</span>{% endif %}{% if category %}<span class="essay-category">{{ category }}</span>{% endif %}</p>{% endif %}
     <h1 class="essay-title">{{ title }}</h1>
     {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
-    <p class="essay-meta">
-      {% if author %}<span class="essay-author">{{ author }}</span>{% endif %}
-      {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
-    </p>
+    {% if author %}
+      <div class="essay-byline">
+        {% if authorPhoto %}<img class="avatar" src="{{ authorPhoto }}" alt="{{ author }}">{% else %}<div class="avatar avatar-initials">{{ authorInitials }}</div>{% endif %}
+        <div class="essay-byline-info">
+          <span class="essay-author">{{ author }}</span>
+          <span class="essay-byline-detail">{% if authorTitle %}{{ authorTitle }}{% endif %}{% if authorTitle and date %} · {% endif %}{% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}</span>
+        </div>
+      </div>
+      {% endif %}
   </header>
   <div class="essay-body">
     {{ content | safe }}
