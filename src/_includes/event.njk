@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<article class="event">
+  {% if series %}<p class="event-series">{{ series }}</p>{% endif %}
+  {% if partner %}<p class="event-partner">In collaboration with {{ partner }}</p>{% endif %}
+  <header class="event-header">
+    <h1 class="event-title">{{ title }}</h1>
+    {% if subtitle %}<p class="event-subtitle">{{ subtitle }}</p>{% endif %}
+    <p class="event-when">
+      {% if eventDate %}<time datetime="{{ eventDate | isoDate }}">{{ eventDate | dateDisplay }}</time>{% endif %}
+      {% if timeLabel %}<span class="event-time">{{ timeLabel }}</span>{% endif %}
+    </p>
+    {% if location %}
+    <p class="event-where">
+      {% if mapUrl %}<a href="{{ mapUrl }}">{{ location }}</a>{% else %}{{ location }}{% endif %}
+    </p>
+    {% endif %}
+    {% if eventDate %}
+      {% if eventDate | isPast %}
+      <p class="event-status event-status-past">This event has taken place. A recap follows below.</p>
+      {% else %}
+      <p class="event-register">
+        {% if registerEmail %}<a class="event-register-link" href="mailto:{{ registerEmail }}?subject=Registration%20%E2%80%94%20{{ title }}">Register to attend</a>{% endif %}
+      </p>
+      {% endif %}
+    {% endif %}
+  </header>
+  <div class="event-body">
+    {{ content | safe }}
+  </div>
+  <p class="event-back"><a href="/events/">← Back to Events</a></p>
+</article>

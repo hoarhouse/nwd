@@ -11,6 +11,10 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString().slice(0, 10);
   });
 
+  eleventyConfig.addFilter("isPast", function(dateObj) {
+    return new Date(dateObj).getTime() < Date.now();
+  });
+
   return {
     dir: {
       input: "src",

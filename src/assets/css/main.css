@@ -294,3 +294,23 @@ h1, h2, h3, h4 {
   }
   body.nav-open .nav-overlay { display: block; }
 }
+
+/* ---- event single page ---- */
+.event-series { font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.5rem; }
+.event-partner { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-muted); margin: 0 0 1.5rem; }
+.event-header { margin-bottom: 2.5rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--color-rule); }
+.event-title { font-size: 2.6rem; margin: 0 0 0.5rem; }
+.event-subtitle { font-family: var(--font-sans); font-size: 1.25rem; color: var(--color-muted); margin: 0 0 1.25rem; }
+.event-when { font-family: var(--font-sans); font-size: 1.05rem; margin: 0 0 0.4rem; font-weight: 600; }
+.event-when .event-time { color: var(--color-muted); font-weight: 400; margin-left: 0.5rem; }
+.event-where { font-family: var(--font-sans); font-size: 1rem; margin: 0 0 1.25rem; }
+.event-where a { color: var(--color-accent); }
+.event-status { font-family: var(--font-sans); font-size: 0.95rem; margin: 0.5rem 0 0; }
+.event-status-past { color: var(--color-muted); font-style: italic; }
+.event-register-link { display: inline-block; font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; background: var(--color-accent); color: #fff; padding: 0.6rem 1.25rem; border-radius: 4px; text-decoration: none; }
+.event-body { font-size: 1.125rem; line-height: 1.75; }
+.event-body p { margin: 0 0 1.5rem; }
+.event-body h2 { font-size: 1.7rem; margin: 2.75rem 0 1rem; }
+.event-body h3 { font-size: 1.3rem; margin: 2.25rem 0 0.75rem; }
+.event-back { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
+.event-back a { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent); text-decoration: none; }
