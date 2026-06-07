@@ -220,3 +220,74 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .carousel-arrow { display: none; }
 }
+
+/* ---- mobile hamburger nav ---- */
+.nav-toggle { display: none; }
+.nav-overlay { display: none; }
+
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .nav-toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-text);
+    margin: 0 auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  body.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  body.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+  body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    max-width: 300px;
+    background: var(--color-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 5rem 1.5rem 2rem;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 50;
+  }
+  body.nav-open .site-nav { transform: translateX(0); }
+
+  .site-nav a, .site-nav .nav-soon { font-size: 1.1rem; }
+  .site-nav .nav-soon em {
+    font-style: normal;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    background: #f0efe8;
+    padding: 0.15rem 0.4rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 40;
+  }
+}
