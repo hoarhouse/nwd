@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<article class="np">
+  <p class="np-meta">
+    {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
+  </p>
+  {% if title %}<h1 class="np-title">{{ title }}</h1>{% endif %}
+  <div class="np-body">
+    {{ content | safe }}
+  </div>
+  <p class="np-back"><a href="/newsroom/">← Back to Newsroom</a></p>
+</article>

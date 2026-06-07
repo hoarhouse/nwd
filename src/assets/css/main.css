@@ -108,3 +108,26 @@ h1, h2, h3, h4 {
   .card-link { grid-template-columns: 1fr; gap: 0.75rem; }
   .card-title { font-size: 1.3rem; }
 }
+
+/* ---- newsroom feed ---- */
+.feed { margin-top: 1rem; }
+.feed-post { padding: 2rem 0; border-bottom: 1px solid var(--color-rule); }
+.feed-post:first-child { padding-top: 0; }
+.feed-meta { font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.5rem; }
+.feed-title { font-size: 1.4rem; margin: 0 0 0.6rem; line-height: 1.25; }
+.feed-title a { color: var(--color-text); text-decoration: none; }
+.feed-title a:hover { color: var(--color-accent); }
+.feed-body { font-size: 1.05rem; line-height: 1.65; }
+.feed-body p { margin: 0 0 1rem; }
+.feed-body p:last-child { margin-bottom: 0; }
+.feed-permalink { margin: 0.85rem 0 0; }
+.feed-permalink a { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-muted); text-decoration: none; }
+.feed-permalink a:hover { color: var(--color-accent); }
+
+/* ---- newsroom single post page ---- */
+.np-meta { font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.5rem; }
+.np-title { font-size: 2rem; margin: 0 0 1.25rem; line-height: 1.2; }
+.np-body { font-size: 1.125rem; line-height: 1.7; }
+.np-body p { margin: 0 0 1.25rem; }
+.np-back { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
+.np-back a { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent); text-decoration: none; }

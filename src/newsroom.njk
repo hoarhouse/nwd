@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Newsroom
+summary: Short updates and signals from the Domus Communis Foundation.
+---
+<div class="section-head">
+  <h1>Newsroom</h1>
+  <p class="section-dek">Short updates, signals, and notes from the Foundation.</p>
+</div>
+<div class="feed">
+{% for post in collections.posts | reverse %}
+  <article class="feed-post">
+    <p class="feed-meta">
+      {% if post.data.date %}<time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time>{% endif %}
+    </p>
+    {% if post.data.title %}<h2 class="feed-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>{% endif %}
+    <div class="feed-body">
+      {{ post.templateContent | safe }}
+    </div>
+    <p class="feed-permalink"><a href="{{ post.url }}">Permalink</a></p>
+  </article>
+{% endfor %}
+</div>
