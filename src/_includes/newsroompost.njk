@@ -6,6 +6,17 @@ layout: base.njk
     {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
   </p>
   {% if title %}<h1 class="np-title">{{ title }}</h1>{% endif %}
+  {% if media %}
+  <div class="media">
+    {% if mediaType == "video" %}
+    <video class="media-item" controls preload="metadata"{% if poster %} poster="{{ poster }}"{% endif %}>
+      <source src="{{ media }}" type="video/mp4">
+    </video>
+    {% else %}
+    <img class="media-item" src="{{ media }}" alt="{{ mediaAlt or title or '' }}">
+    {% endif %}
+  </div>
+  {% endif %}
   <div class="np-body">
     {{ content | safe }}
   </div>

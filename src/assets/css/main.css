@@ -131,3 +131,7 @@ h1, h2, h3, h4 {
 .np-body p { margin: 0 0 1.25rem; }
 .np-back { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
 .np-back a { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-accent); text-decoration: none; }
+
+/* ---- newsroom media (native shapes, no cropping) ---- */
+.media { margin: 0 0 1rem; text-align: center; background: #f0efe8; border-radius: 4px; }
+.media-item { display: block; margin: 0 auto; max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: 4px; }
