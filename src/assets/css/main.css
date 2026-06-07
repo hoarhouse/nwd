@@ -355,3 +355,14 @@ h1, h2, h3, h4 {
 .home-news-untitled { margin: 0; }
 .home-news-untitled a { color: var(--color-text); text-decoration: none; }
 .home-news-untitled a:hover { color: var(--color-accent); }
+
+/* ---- initiatives ---- */
+.initiatives { margin-top: 1rem; }
+.initiative { padding: 2rem 0; border-bottom: 1px solid var(--color-rule); }
+.initiative:first-child { padding-top: 0; }
+.initiative:last-child { border-bottom: 0; }
+.initiative-name { font-size: 1.6rem; margin: 0 0 0.3rem; }
+.initiative-tagline { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--color-accent); margin: 0 0 0.85rem; }
+.initiative-desc { font-size: 1.05rem; line-height: 1.65; margin: 0 0 1rem; }
+.initiative-programs { font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.5; color: var(--color-text); margin: 0; padding-left: 1.25rem; }
+.initiative-programs li { margin: 0 0 0.4rem; }

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Peace",
+    "tagline": "Digital Peace Process for Global Stability",
+    "description": "Programs for a Digital Peace Process to end cyber hostilities, cyber disinformation, and autonomous AI weapon systems in conjunction with peace efforts to stop military hostilities for sustainable integral peace.",
+    "programs": [
+      "Digital Peace Initiative bringing together government leaders, technologists, faith leaders, and academia",
+      "Planning and advocacy for Cyber Ceasefire",
+      "Ending autonomous AI weaponry and cyber disinformation"
+    ]
+  },
+  {
+    "name": "Technology",
+    "tagline": "Solutions of Digital Sovereignty, Sovereign AI and Values Based AI Programming",
+    "description": "Solutions for data sovereignty, sovereign AI, and values based programming for the common good of humankind and for serving vulnerable populations worldwide to eliminate the digital divide.",
+    "programs": [
+      "Enabling and providing data sovereign platforms",
+      "Sovereign AI and agentic AI with values controlled by users",
+      "Goal: fully enabled pod available and within reach of everyone"
+    ]
+  },
+  {
+    "name": "Academia",
+    "tagline": "Connecting Global Academic Excellence",
+    "description": "Bringing together academicians and academia from around the world for research and aggregating academic resources on technology for advancement of cyber and AI to benefit humankind.",
+    "programs": [
+      "Developing an academic commons for academicians and academic institutions",
+      "Sharing information and collaboration for values based, human-centered cyber and AI technologies"
+    ]
+  },
+  {
+    "name": "Education",
+    "tagline": "Programs for Cyber Safety, Sovereign AI, and Values Based AI",
+    "description": "Programs in cybersecurity, cyber safety, and human-centered AI curricula for secular, faith-based, and Catholic schools; students; teachers; parents; and caregivers.",
+    "programs": [
+      "Interactive experiential learning platform and simulations",
+      "Cyber safety, cyberbullying, and leadership training",
+      "Certification programs for human-centered AI technologies",
+      "Curriculum for secular, Catholic, and faith-based schools"
+    ]
+  },
+  {
+    "name": "Mentorship",
+    "tagline": "Guiding the Next Generation of Values-Based Developers",
+    "description": "Mentorship and technology programs to guide young and emerging developers and programmers with values based, human-centered principles throughout their innovation journey.",
+    "programs": [
+      "Providing a global mentoring network",
+      "Live training and e-learning platforms",
+      "Connecting young developers with capital and opportunities"
+    ]
+  },
+  {
+    "name": "Research",
+    "tagline": "Accelerating Human-Centric AI Innovation",
+    "description": "Supporting and aggregating pioneering scientific research to guide and accelerate human-centric, safe cyber and AI technologies to benefit humanity.",
+    "programs": [
+      "Developing research commons for global collaboration",
+      "Connecting researchers with commercial applications",
+      "Sharing research and resources through the technology community"
+    ]
+  },
+  {
+    "name": "Regulatory",
+    "tagline": "Building Effective Standards and Regulations",
+    "description": "Provide connectivity to all communities with the regulatory agencies to develop effective regulations and standards.",
+    "programs": [
+      "Creating a regulatory commons for global connection",
+      "Best practice sharing between regulators",
+      "Connecting regulators with technologists, researchers, faith leaders, and academics",
+      "Identifying standards for regulatory guidance and human protection"
+    ]
+  },
+  {
+    "name": "Theology/Philosophy",
+    "tagline": "Interfaith Commons for Values Based Technology",
+    "description": "Provide an interfaith commons and sharing of values for the continued development and advancement of values based, human-centered cyber and AI technologies bringing faith and science to work closely together.",
+    "programs": [
+      "Creating the interfaith commons",
+      "Providing values based integration into developing cyber and AI technologies",
+      "Maintaining cultural and societal values in AI programs and systems worldwide"
+    ]
+  }
+]

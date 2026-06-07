@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Initiatives
+summary: "Eight strategic programs advancing sovereign, human-centered technology for the common good."
+---
+<div class="section-head">
+  <h1>Initiatives</h1>
+  <p class="section-dek">Eight strategic programs advancing data sovereignty, sovereign AI, and values-based technology for the common good.</p>
+</div>
+<div class="initiatives">
+{% for item in initiatives %}
+  <section class="initiative">
+    <h2 class="initiative-name">{{ item.name }}</h2>
+    <p class="initiative-tagline">{{ item.tagline }}</p>
+    <p class="initiative-desc">{{ item.description }}</p>
+    {% if item.programs %}
+    <ul class="initiative-programs">
+      {% for program in item.programs %}<li>{{ program }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+{% endfor %}
+</div>
