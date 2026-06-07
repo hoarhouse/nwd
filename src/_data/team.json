@@ -2,39 +2,121 @@
   {
     "group": "Board Members",
     "people": [
-      { "name": "Antal Kuthy", "role": "DCF Hungary", "initials": "AK" },
-      { "name": "Cardinal Silvano Maria Tomasi", "role": "DCF Hungary", "initials": "ST" },
-      { "name": "Zoltán Pap", "role": "DCF USA & DCF Hungary", "initials": "ZP" },
-      { "name": "Dr. Alessio Pecorario", "role": "DCF USA & DCF Hungary", "initials": "AP" },
-      { "name": "Danielle McLaughlin", "role": "DCF USA", "initials": "DM" },
-      { "name": "Michael Wilson", "role": "DCF USA", "initials": "MW" }
+      {
+        "name": "Antal Kuthy",
+        "role": "DCF Hungary",
+        "initials": "AK",
+        "photo": "/assets/team/kuthy.jpg"
+      },
+      {
+        "name": "Cardinal Silvano Maria Tomasi",
+        "role": "DCF Hungary",
+        "initials": "ST",
+        "photo": "/assets/team/tomasi.jpg"
+      },
+      {
+        "name": "Zoltán Pap",
+        "role": "DCF USA & DCF Hungary",
+        "initials": "ZP",
+        "photo": "/assets/team/pap.jpg"
+      },
+      {
+        "name": "Dr. Alessio Pecorario",
+        "role": "DCF USA & DCF Hungary",
+        "initials": "AP",
+        "photo": "/assets/team/pecorario.jpg"
+      },
+      {
+        "name": "Danielle McLaughlin",
+        "role": "DCF USA",
+        "initials": "DM",
+        "photo": "/assets/team/mclaughlin.jpg"
+      },
+      {
+        "name": "Michael Wilson",
+        "role": "DCF USA",
+        "initials": "MW",
+        "photo": "/assets/team/wilson.jpg"
+      }
     ]
   },
   {
     "group": "Spiritual Voices",
     "people": [
-      { "name": "Cardinal Silvano Maria Tomasi", "role": "Apostolic Nuncio", "initials": "ST", "bio": "Cardinal Silvano Maria Tomasi is an Italian prelate of the Catholic Church, a seasoned diplomat, sociologist, and advocate for human dignity in global affairs. He has served as Permanent Observer of the Holy See to the United Nations in Geneva, Apostolic Nuncio in Africa, and Special Delegate to the Sovereign Military Hospitaller Order of Malta. Created cardinal by Pope Francis in 2020, his decades of service reflect a lifelong commitment to human rights, nuclear disarmament, social justice, and global dialogue rooted in faith and conscience." }
+      {
+        "name": "Cardinal Silvano Maria Tomasi",
+        "role": "Apostolic Nuncio",
+        "initials": "ST",
+        "bio": "Cardinal Silvano Maria Tomasi is an Italian prelate of the Catholic Church, a seasoned diplomat, sociologist, and advocate for human dignity in global affairs. He has served as Permanent Observer of the Holy See to the United Nations in Geneva, Apostolic Nuncio in Africa, and Special Delegate to the Sovereign Military Hospitaller Order of Malta. Created cardinal by Pope Francis in 2020, his decades of service reflect a lifelong commitment to human rights, nuclear disarmament, social justice, and global dialogue rooted in faith and conscience.",
+        "photo": "/assets/team/tomasi.jpg"
+      }
     ]
   },
   {
     "group": "Our Global Volunteer Team",
     "people": [
-      { "name": "Zad Vecsey", "role": "Program Leader", "initials": "ZV" },
-      { "name": "Gergely Fabian", "role": "Technology Programs", "initials": "GF" },
-      { "name": "Chris Hoar", "role": "Marketing/PR/Branding Leader", "initials": "CH" },
-      { "name": "Vincenzo Cursio", "role": "PR & Communications", "initials": "VC" },
-      { "name": "Dante Cullari", "role": "Technology Programs", "initials": "DC" }
+      {
+        "name": "Zad Vecsey",
+        "role": "Program Leader",
+        "initials": "ZV"
+      },
+      {
+        "name": "Gergely Fabian",
+        "role": "Technology Programs",
+        "initials": "GF"
+      },
+      {
+        "name": "Chris Hoar",
+        "role": "Marketing/PR/Branding Leader",
+        "initials": "CH"
+      },
+      {
+        "name": "Vincenzo Cursio",
+        "role": "PR & Communications",
+        "initials": "VC",
+        "photo": "/assets/team/cursio.jpg"
+      },
+      {
+        "name": "Dante Cullari",
+        "role": "Technology Programs",
+        "initials": "DC"
+      }
     ]
   },
   {
     "group": "Our Donor Coordinators",
     "people": [
-      { "name": "Daniel Stakoe", "role": "Japan", "initials": "DS" },
-      { "name": "Austin Homfeld", "role": "Texas", "initials": "AH" },
-      { "name": "Joseph Szombati", "role": "Michigan", "initials": "JS" },
-      { "name": "Bob Pontbriand", "role": "Pennsylvania", "initials": "BP" },
-      { "name": "Nick Kerry", "role": "Northern California", "initials": "NK" },
-      { "name": "Chris Somogyi", "role": "Florida", "initials": "CS" }
+      {
+        "name": "Daniel Stakoe",
+        "role": "Japan",
+        "initials": "DS"
+      },
+      {
+        "name": "Austin Homfeld",
+        "role": "Texas",
+        "initials": "AH"
+      },
+      {
+        "name": "Joseph Szombati",
+        "role": "Michigan",
+        "initials": "JS"
+      },
+      {
+        "name": "Bob Pontbriand",
+        "role": "Pennsylvania",
+        "initials": "BP",
+        "photo": "/assets/team/pontbriand.jpg"
+      },
+      {
+        "name": "Nick Kerry",
+        "role": "Northern California",
+        "initials": "NK"
+      },
+      {
+        "name": "Chris Somogyi",
+        "role": "Florida",
+        "initials": "CS"
+      }
     ]
   }
 ]

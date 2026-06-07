@@ -366,17 +366,17 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) { .principles-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
 
 .team-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
-.team-section-heading { font-size: 1.7rem; margin: 0 0 2rem; }
+.team-heading { font-size: 1.7rem; margin: 0 0 2rem; }
 .team-group { margin-bottom: 2.5rem; }
-.team-group-heading { font-size: 1.25rem; margin: 0 0 1rem; color: var(--color-accent); }
-.team-list { list-style: none; padding: 0; margin: 0; }
-.team-member { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
-.team-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.team-initials { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; }
-.team-text { flex: 1; }
-.team-name { font-weight: 600; margin: 0 0 0.15rem; }
-.team-role { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-muted); margin: 0; }
-.team-bio { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--color-text); margin: 0.5rem 0 0; }
+.team-group-name { font-size: 1.25rem; margin: 0 0 1rem; color: var(--color-accent); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.5rem 1.25rem; }
+.team-member { display: flex; gap: 0.75rem; align-items: center; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; display: block; }
+.avatar-initials { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; line-height: 1; color: var(--color-muted); background: #ece9df; border-radius: 50%; flex-shrink: 0; }
+.team-member-text { flex: 1; }
+.team-member-name { font-weight: 600; margin: 0 0 0.15rem; }
+.team-member-role { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-muted); margin: 0; }
+.team-member-bio { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--color-text); margin: 0.5rem 0 0; }
 
 .connect-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
 .connect-heading { font-size: 1.7rem; margin: 0 0 0.75rem; }
