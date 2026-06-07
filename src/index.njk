@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: false
+summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and values-based technology for the common good."
+---
+<section class="home-intro">
+  <p class="home-statement"><strong>Domus Communis Foundation</strong> is a global constellation of nonprofits dedicated to data sovereignty, sovereign AI, and values-based technology that serves humanity rather than the reverse. Guided by Catholic Social Teaching while serving people of all faiths, we connect technologists, civil society, academia, and faith leaders to shape a future where technology serves human dignity, peace, and the common good.</p>
+</section>
+
+{% set upcoming = [] %}
+{% set past = [] %}
+{% for event in collections.events %}
+  {% if event.data.eventDate | isPast %}{% set past = (past.push(event), past) %}{% else %}{% set upcoming = (upcoming.push(event), upcoming) %}{% endif %}
+{% endfor %}
+{% set featuredEvent = null %}
+{% if upcoming.length %}{% set featuredEvent = (upcoming | sort(false, false, "data.eventDate"))[0] %}{% elif past.length %}{% set featuredEvent = (past | sort(true, false, "data.eventDate"))[0] %}{% endif %}
+
+{% if featuredEvent %}
+<section class="home-section">
+  <h2 class="home-section-heading"><a href="/events/">Events</a></h2>
+  <a class="home-event" href="{{ featuredEvent.url }}">
+    <p class="card-eventdate"><time datetime="{{ featuredEvent.data.eventDate | isoDate }}">{{ featuredEvent.data.eventDate | dateDisplay }}</time></p>
+    <h3 class="home-event-title">{{ featuredEvent.data.title }}</h3>
+    {% if featuredEvent.data.subtitle %}<p class="card-dek">{{ featuredEvent.data.subtitle }}</p>{% endif %}
+  </a>
+</section>
+{% endif %}
+
+{% if collections.essays.length %}
+<section class="home-section">
+  <h2 class="home-section-heading"><a href="/writing/">Writing</a></h2>
+  <ul class="card-list">
+  {% for essay in (collections.essays | reverse).slice(0, 3) %}
+    <li class="card">
+      <a class="card-link" href="{{ essay.url }}">
+        {% if essay.data.hero %}<div class="card-thumb"><img src="{{ essay.data.hero }}" alt=""></div>{% endif %}
+        <div class="card-text">
+          <h3 class="card-title">{{ essay.data.title }}</h3>
+          {% if essay.data.summary %}<p class="card-dek">{{ essay.data.summary }}</p>{% endif %}
+          {% if essay.data.date %}<p class="card-meta"><time datetime="{{ essay.data.date | isoDate }}">{{ essay.data.date | dateDisplay }}</time></p>{% endif %}
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if collections.posts.length %}
+<section class="home-section">
+  <h2 class="home-section-heading"><a href="/newsroom/">Newsroom</a></h2>
+  <ul class="home-news">
+  {% for post in (collections.posts | reverse).slice(0, 3) %}
+    <li class="home-news-item">
+      <p class="feed-meta">{% if post.data.date %}<time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time>{% endif %}</p>
+      {% if post.data.title %}<h3 class="home-news-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>{% else %}<p class="home-news-untitled"><a href="{{ post.url }}">{{ post.data.summary or "Read post →" }}</a></p>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
