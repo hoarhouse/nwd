@@ -356,6 +356,38 @@ h1, h2, h3, h4 {
 .home-news-untitled a { color: var(--color-text); text-decoration: none; }
 .home-news-untitled a:hover { color: var(--color-accent); }
 
+/* ---- about ---- */
+.principles-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
+.principles-heading { font-size: 1.7rem; margin: 0 0 0.75rem; }
+.principles-intro { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-muted); margin: 0 0 1.5rem; line-height: 1.5; }
+.principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
+.principle h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+.principle p { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--color-text); margin: 0; }
+@media (max-width: 768px) { .principles-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+
+.team-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
+.team-section-heading { font-size: 1.7rem; margin: 0 0 2rem; }
+.team-group { margin-bottom: 2.5rem; }
+.team-group-heading { font-size: 1.25rem; margin: 0 0 1rem; color: var(--color-accent); }
+.team-list { list-style: none; padding: 0; margin: 0; }
+.team-member { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+.team-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.team-initials { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; }
+.team-text { flex: 1; }
+.team-name { font-weight: 600; margin: 0 0 0.15rem; }
+.team-role { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-muted); margin: 0; }
+.team-bio { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--color-text); margin: 0.5rem 0 0; }
+
+.connect-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-rule); }
+.connect-heading { font-size: 1.7rem; margin: 0 0 0.75rem; }
+.connect-intro { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-muted); margin: 0 0 1.5rem; line-height: 1.5; }
+.connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
+.connect-item h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+.connect-item p { font-family: var(--font-sans); font-size: 0.9rem; margin: 0; }
+.connect-item a { color: var(--color-accent); text-decoration: none; }
+.connect-item a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .connect-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+
 /* ---- initiatives ---- */
 .initiatives { margin-top: 1rem; }
 .initiative { padding: 2rem 0; border-bottom: 1px solid var(--color-rule); }

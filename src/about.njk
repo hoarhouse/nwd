@@ -1,0 +1,52 @@
+---
+layout: base.njk
+title: About
+summary: "Domus Communis Foundation — a global constellation of nonprofits advancing data sovereignty, sovereign AI, and values-based technology for the common good."
+---
+<div class="section-head">
+  <h1>About DCF</h1>
+  <p class="section-dek">Building data sovereignty, sovereign AI, values-based AI programming, and emerging cyber technology for the common good of humankind.</p>
+</div>
+
+<div class="prose">
+  <p>Domus Communis Foundation is a global constellation of nonprofits throughout the Global North, South, East, and West dedicated to developing and providing solutions for data sovereignty, sovereign AI, values-based AI programming, and emerging cyber technology that serve humanity rather than the reverse. We build a "cyber commons" — a globally networked collaborative space where values-based technology development operates through shared resources, collective solutions, and mutual benefit.</p>
+  <p>Guided by the values of Catholic Social Teaching while serving people of all faiths, we bridge and connect AI and technology actors, global civil society leaders, academia, Nobel Laureates, faith leaders, and institutions to shape a future where data sovereignty, sovereign AI, values-based AI programming, and emerging cyber technology serves humanity, peace, and human dignity.</p>
+
+  <h2>The DCF Constellation</h2>
+  <p>DCF is designed as a constellation structure of nonprofits through the Global North, South, East and West to connect experts, academics, researchers, governments and regulators, representatives of civil society and humanitarian organizations, alongside companies and interested individuals to collaborate together to advance data sovereignty, sovereign AI, values-based AI programming, and emerging cyber technology development and solutions for the common good of humankind.</p>
+  <p>The DCF constellation currently has nonprofits located in the United States and Hungary and is in the process of establishing nonprofits in Japan, Italy, Ghana, and the UAE. It offers a shared resource model to operate cost-effectively around the globe and network the talent and technologies to accelerate the mission and maximize the impact.</p>
+</div>
+
+<section class="principles-section">
+  <h2 class="principles-heading">Our Guiding Principles</h2>
+  <p class="principles-intro">Inspired by Catholic Social Teaching. While inspired by Catholic principles, DCF welcomes and serves people of all faiths and backgrounds.</p>
+  <div class="principles-grid">
+    <div class="principle"><h3>Human Dignity</h3><p>Every person possesses inherent worth; technology must serve and protect this dignity.</p></div>
+    <div class="principle"><h3>Common Good</h3><p>Technology should benefit all of society, not just the privileged few.</p></div>
+    <div class="principle"><h3>Subsidiarity</h3><p>Decisions should be made at the most local level possible.</p></div>
+    <div class="principle"><h3>Solidarity</h3><p>Technology must foster interconnection and mutual support.</p></div>
+    <div class="principle"><h3>Preferential Option for the Poor</h3><p>Technology should bridge gaps, not widen them.</p></div>
+    <div class="principle"><h3>Care for Creation</h3><p>Sustainable innovation preserving the earth for future generations.</p></div>
+  </div>
+</section>
+
+<section class="team-section">
+  <h2 class="team-heading">Our Leadership</h2>
+  {% for grp in team %}
+  <div class="team-group">
+    <h3 class="team-group-name">{{ grp.group }}</h3>
+    <div class="team-grid">
+      {% for person in grp.people %}
+      <div class="team-member">
+        <div class="avatar avatar-initials">{{ person.initials }}</div>
+        <div class="team-member-text">
+          <p class="team-member-name">{{ person.name }}</p>
+          {% if person.role %}<p class="team-member-role">{{ person.role }}</p>{% endif %}
+          {% if person.bio %}<p class="team-member-bio">{{ person.bio }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
