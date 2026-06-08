@@ -33,8 +33,9 @@ summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and valu
   {% for essay in (collections.essays | reverse).slice(0, 3) %}
     <li class="card">
       <a class="card-link" href="{{ essay.url }}">
-        {% if essay.data.hero %}<div class="card-thumb"><img src="{{ essay.data.hero }}" alt=""></div>{% endif %}
+        {% if essay.data.hero %}<div class="card-thumb"><img src="{{ essay.data.hero }}" alt=""></div>{% else %}<div class="card-thumb card-thumb-placeholder"></div>{% endif %}
         <div class="card-text">
+          {% if essay.data.category %}<p class="card-kicker">{{ essay.data.category }}</p>{% endif %}
           <h3 class="card-title">{{ essay.data.title }}</h3>
           {% if essay.data.summary %}<p class="card-dek">{{ essay.data.summary }}</p>{% endif %}
           {% if essay.data.date %}<p class="card-meta"><time datetime="{{ essay.data.date | isoDate }}">{{ essay.data.date | dateDisplay }}</time></p>{% endif %}
