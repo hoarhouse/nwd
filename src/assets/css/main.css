@@ -415,3 +415,6 @@ h1, h2, h3, h4 {
 .essay-byline-info { display: flex; flex-direction: column; line-height: 1.3; }
 .essay-byline .essay-author { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--color-text); }
 .essay-byline-detail { font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-muted); }
+
+/* --- Listing card placeholder thumbnail (no hero image yet) --- */
+.card-thumb-placeholder { width: 100%; aspect-ratio: 16 / 9; border-radius: 3px; background: linear-gradient(135deg, #ece9df 0%, #f5f2e8 100%); border: 1px solid var(--color-rule); }
