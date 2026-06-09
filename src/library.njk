@@ -57,6 +57,8 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
       if (open) {
         viewer.hidden = true;
         viewer.innerHTML = '';
+        var thumbClosed = item.querySelector('.library-thumb-btn');
+        if (thumbClosed) { thumbClosed.hidden = false; }
         btn.setAttribute('aria-expanded', 'false');
         if (btn.classList.contains('btn-view')) {
           btn.textContent = 'View slides';
@@ -64,6 +66,8 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
       } else {
         viewer.innerHTML = '<iframe class="library-frame" src="' + btn.dataset.pdf + '" title="' + item.querySelector('.library-title').textContent + '" loading="lazy"></iframe>';
         viewer.hidden = false;
+        var thumbOpen = item.querySelector('.library-thumb-btn');
+        if (thumbOpen) { thumbOpen.hidden = true; }
         btn.setAttribute('aria-expanded', 'true');
         if (btn.classList.contains('btn-view')) {
           btn.textContent = 'Hide slides';
