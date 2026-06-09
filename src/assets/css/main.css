@@ -345,27 +345,27 @@ h1, h2, h3, h4 {
 .home-statement { font-family: "Source Serif 4", Georgia, serif; font-size: 1.4rem; line-height: 1.5; color: var(--color-text); margin: 0; }
 .home-section { margin-bottom: 3rem; }
 .home-concepts { margin-top: 2rem; }
-.concept-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-.concept { display: flex; flex-direction: column; padding: 1.5rem 1.5rem 1.6rem; background: var(--color-surface, #faf8f2); border-top: 3px solid var(--color-accent); border-radius: 2px; }
-.concept-title { font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.25; margin: 0 0 0.75rem; color: var(--color-text); }
+.concept-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+.concept { padding: 0; }
+.concept-title { font-family: var(--font-serif); font-size: 1.2rem; line-height: 1.25; margin: 0 0 0.5rem; color: var(--color-accent); }
 .concept-text { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--color-muted); }
 .home-concepts-more { margin-top: 1.5rem; }
 .home-concepts-more a { color: var(--color-accent); text-decoration: none; font-weight: 600; }
 .home-concepts-more a:hover { text-decoration: underline; }
 @media (max-width: 760px) { .concept-list { grid-template-columns: 1fr; } }
 .home-initiatives-lead { margin: 0 0 1.5rem; color: var(--color-muted); }
-.initiative-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
-.initiative-grid a { display: block; padding: 0.7rem 0.9rem; background: var(--color-surface, #faf8f2); border-left: 2px solid var(--color-accent); border-radius: 2px; text-align: left; text-decoration: none; color: var(--color-text); font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.01em; transition: background 0.15s, color 0.15s; }
-.initiative-grid a:hover { background: var(--color-accent); color: white; border-color: var(--color-accent); }
+.initiative-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+.initiative-grid a { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--color-text); text-decoration: none; }
+.initiative-grid a:hover { color: var(--color-accent); }
 .home-initiatives-more { margin-top: 1.5rem; text-align: center; }
 .home-initiatives-more a { color: var(--color-accent); text-decoration: none; font-weight: 600; }
 .home-initiatives-more a:hover { text-decoration: underline; }
-@media (max-width: 760px) { .initiative-grid { grid-template-columns: repeat(2, 1fr); } }
+
 .home-convene { margin-top: 2rem; }
 .home-convene-lead { margin: 0 0 1.5rem; color: var(--color-muted); }
-.convene-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.convene-list li { padding: 1rem; background: var(--color-surface, #faf8f2); border-left: 3px solid var(--color-accent); border-radius: 2px; font-size: 0.95rem; color: var(--color-text); }
-@media (max-width: 760px) { .convene-list { grid-template-columns: 1fr; } }
+.convene-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+.convene-list li { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--color-text); }
+
 .home-section-heading { font-size: 0.9rem; font-family: var(--font-sans); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-rule); }
 .home-section-heading a { color: var(--color-muted); text-decoration: none; }
 .home-section-heading a:hover { color: var(--color-accent); }
