@@ -67,6 +67,9 @@ footer.site-footer {
   color: var(--color-muted);
   font-size: 0.85rem;
 }
+.footer-org { font-weight: 600; margin: 0 0 0.5rem; }
+.footer-legal { font-size: 0.75rem; margin: 0 0 0.3rem; opacity: 0.8; }
+.footer-tagline { font-size: 0.8rem; margin: 0; font-style: italic; }
 
 /* ---- single accent (provisional — change here to restyle site-wide) ---- */
 :root { --color-accent: #11696b; }
