@@ -1,0 +1,67 @@
+---
+layout: base.njk
+title: Library
+summary: "Presentations and resources from the Domus Communis Foundation on data sovereignty, sovereign AI, and values-based technology."
+---
+<div class="section-head">
+  <h1>Library</h1>
+  <p class="section-dek">Presentations from the Domus Communis Foundation on data sovereignty, sovereign AI, and values-based technology grounded in Catholic Social Teaching.</p>
+</div>
+
+<ul class="library-list">
+
+  <li class="library-item">
+    <h2 class="library-title">Value-Based AI and Catholic Teaching</h2>
+    <p class="library-dek">How Catholic moral principles can shape the design and deployment of artificial intelligence.</p>
+    <div class="library-actions">
+      <button class="btn-view" type="button" data-pdf="/assets/library/value-based-ai-catholic-teaching.pdf" aria-expanded="false">View slides</button>
+      <a class="btn-dl" href="/assets/library/value-based-ai-catholic-teaching.pdf" download>Download PDF</a>
+      <a class="btn-dl" href="/assets/library/value-based-ai-catholic-teaching.pptx" download>Download PowerPoint</a>
+    </div>
+    <div class="library-viewer" hidden></div>
+  </li>
+
+  <li class="library-item">
+    <h2 class="library-title">Sovereign Data, AI, and Catholic Social Teaching</h2>
+    <p class="library-dek">Connecting data sovereignty and sovereign AI to the Church's social tradition.</p>
+    <div class="library-actions">
+      <button class="btn-view" type="button" data-pdf="/assets/library/sovereign-data-ai-catholic-social-teaching.pdf" aria-expanded="false">View slides</button>
+      <a class="btn-dl" href="/assets/library/sovereign-data-ai-catholic-social-teaching.pdf" download>Download PDF</a>
+      <a class="btn-dl" href="/assets/library/sovereign-data-ai-catholic-social-teaching.pptx" download>Download PowerPoint</a>
+    </div>
+    <div class="library-viewer" hidden></div>
+  </li>
+
+  <li class="library-item">
+    <h2 class="library-title">Valuing Sovereign Data</h2>
+    <p class="library-dek">Why individual and collective data ownership matters in the AI economy.</p>
+    <div class="library-actions">
+      <button class="btn-view" type="button" data-pdf="/assets/library/valuing-sovereign-data.pdf" aria-expanded="false">View slides</button>
+      <a class="btn-dl" href="/assets/library/valuing-sovereign-data.pdf" download>Download PDF</a>
+      <a class="btn-dl" href="/assets/library/valuing-sovereign-data.pptx" download>Download PowerPoint</a>
+    </div>
+    <div class="library-viewer" hidden></div>
+  </li>
+
+</ul>
+
+<script>
+  document.querySelectorAll('.btn-view').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.library-item');
+      var viewer = item.querySelector('.library-viewer');
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      if (open) {
+        viewer.hidden = true;
+        viewer.innerHTML = '';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'View slides';
+      } else {
+        viewer.innerHTML = '<iframe class="library-frame" src="' + btn.dataset.pdf + '" title="' + item.querySelector('.library-title').textContent + '" loading="lazy"></iframe>';
+        viewer.hidden = false;
+        btn.setAttribute('aria-expanded', 'true');
+        btn.textContent = 'Hide slides';
+      }
+    });
+  });
+</script>
