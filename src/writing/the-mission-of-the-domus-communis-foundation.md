@@ -7,7 +7,7 @@ authorInitials: "ZP"
 authorPhoto: ""
 category: "DCF Mission"
 summary: "Why DCF exists: building a global commons for human-centric, sovereign technology that serves the common good."
-hero: ""
+hero: "/assets/covers/the-mission-of-the-domus-communis-foundation.png"
 tags: ["essays"]
 ---
 

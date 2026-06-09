@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Ethics Frameworks"
 summary: "While governments scrambled to regulate and companies rushed to deploy, the Church quietly built something radical in its simplicity: a moral framework for AI that puts the human person, not the machine, at the center."
-hero: ""
+hero: "/assets/covers/the-vaticans-ai-blueprint.png"
 tags: ["essays"]
 ---
 

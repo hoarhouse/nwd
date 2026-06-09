@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Nuclear to Neural"
 summary: "From the mushroom clouds of Nagasaki to autonomous weapons, the Church's warning has stayed consistent: some decisions are too human to automate."
-hero: ""
+hero: "/assets/covers/from-nukes-to-neural-nets.png"
 tags: ["essays"]
 ---
 

@@ -7,7 +7,7 @@ authorInitials: "CB"
 authorPhoto: ""
 category: "Cyberpeace"
 summary: "Why digital security can no longer be separated from ethics, sovereignty, and human dignity—a case for integral cybersecurity."
-hero: ""
+hero: "/assets/covers/beyond-firewalls.png"
 tags: ["essays"]
 ---
 

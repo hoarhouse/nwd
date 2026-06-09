@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Labor & Dignity"
 summary: "As automation comes for the white-collar class, the Church asks a different question than the economists: not whether AI can replace human work, but whether it should—and what society owes those it leaves behind."
-hero: ""
+hero: "/assets/covers/the-holy-sees-warning-about-ai-and-the-end-of-work.png"
 tags: ["essays"]
 ---
 

@@ -7,7 +7,7 @@ authorInitials: "ZP"
 authorPhoto: ""
 category: "AI Ethics"
 summary: "As artificial intelligence systems grow in complexity, the question of machine consciousness challenges our deepest assumptions about what it means to be human."
-hero: ""
+hero: "/assets/covers/will-ai-achieve-consciousness.png"
 tags: ["essays"]
 ---
 

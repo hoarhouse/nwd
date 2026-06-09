@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Nuclear to Neural"
 summary: "Across three pontificates and thirty-five years, the Church built a moral architecture for judging technologies that outrun conscience—from nuclear disarmament to the age of algorithms."
-hero: ""
+hero: "/assets/covers/from-mushroom-clouds-to-machine-code.png"
 tags: ["essays"]
 ---
 

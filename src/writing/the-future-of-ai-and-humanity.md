@@ -7,6 +7,7 @@ authorInitials: "AZ"
 category: "AI Ethics"
 date: 2025-01-01
 summary: "Sovereign AI distributes control of both data and intelligence to individuals and communities, creating a technology ecosystem that serves humanity rather than controlling it."
+hero: "/assets/covers/the-future-of-ai-and-humanity.png"
 ---
 
 It is clear that the intelligence revolution has surpassed the industrial revolution in a significantly condensed timeframe. However, it appears that we are moving toward a technological age akin to the feudalistic economic order of the Middle Ages.

@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Vatican & AI"
 summary: "In 2020, the world's most powerful tech executives flew to Rome to sign a moral code for artificial intelligence. Five years on, the Rome Call looks less quaint than prophetic."
-hero: ""
+hero: "/assets/covers/the-catholic-churchs-ai-revolution.png"
 tags: ["essays"]
 ---
 

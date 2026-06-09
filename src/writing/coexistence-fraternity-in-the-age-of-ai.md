@@ -7,7 +7,7 @@ authorInitials: "DCF"
 authorPhoto: ""
 category: "Faith & Technology"
 summary: "A global appeal, signed by leading scientists and thinkers, for AI developed responsibly—by and for the human family."
-hero: ""
+hero: "/assets/covers/coexistence-fraternity-in-the-age-of-ai.png"
 tags: ["essays"]
 ---
 

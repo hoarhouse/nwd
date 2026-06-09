@@ -7,7 +7,7 @@ authorInitials: "ZP"
 authorPhoto: ""
 category: "Faith & Technology"
 summary: "How Catholic Social Teaching—from Rerum Novarum to today—offers a time-tested framework for data sovereignty, sovereign AI, and embedding human dignity in code."
-hero: ""
+hero: "/assets/covers/values-based-ai-catholic-social-teaching.png"
 tags: ["essays"]
 ---
 
