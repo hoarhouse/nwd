@@ -7,7 +7,7 @@ authorInitials: "ZP"
 authorPhoto: ""
 category: "Digital Sovereignty"
 summary: "As AI displaces labor and extracts value from the data we all produce, Data Based Income offers a new social contract—compensating individuals for the data that powers the digital economy."
-hero: ""
+hero: "/assets/covers/data-based-income.png"
 tags: ["essays"]
 ---
 
