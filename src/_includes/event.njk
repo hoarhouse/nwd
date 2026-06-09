@@ -38,7 +38,7 @@ layout: base.njk
     {% for speaker in speakers %}
     <div class="speaker">
       <div class="speaker-head">
-        {% if speaker.headshot %}<img class="avatar" src="{{ speaker.headshot }}" alt="{{ speaker.name }}">{% endif %}
+        {% if speaker.headshot %}<img class="avatar" src="{{ speaker.headshot }}" alt="{{ speaker.name }}">{% elif speaker.initials %}<span class="avatar avatar-initials" aria-hidden="true">{{ speaker.initials }}</span>{% endif %}
         <div class="speaker-head-text">
           <h3 class="speaker-name">{{ speaker.name }}</h3>
           {% if speaker.talk %}<p class="speaker-talk">{{ speaker.talk }}</p>{% endif %}

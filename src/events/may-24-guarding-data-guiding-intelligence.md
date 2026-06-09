@@ -22,6 +22,7 @@ speakers:
     photos:
       - /assets/events/may-24/tomasi-1.jpg
   - name: "Dr. James E. Muller"
+    initials: "JM"
     talk: "Artificial Intelligence, Nuclear Systems, and Human Responsibility"
     bio: "Dr. Muller explored the growing intersection between artificial intelligence and strategic security systems, warning against the dangers of compressing human decision-making within increasingly automated environments. His intervention highlighted the importance of preserving human responsibility in situations where technological systems may influence decisions with profound consequences."
     photos:
@@ -33,32 +34,39 @@ speakers:
     photos:
       - /assets/events/may-24/papp-1.jpg
   - name: "Rev. Fr. Jesse Garcia"
+    initials: "JG"
     talk: "Community Life and Technological Transformation"
     bio: "Drawing from his pastoral experience in Texas, Fr. Garcia reflected on how communities can accompany people through periods of rapid technological change. He emphasized that human relationships, trust, and local participation remain essential foundations for any healthy digital future."
     photos:
       - /assets/events/may-24/garcia-1.jpg
   - name: "Rev. Fr. Michael K. Quaicoe"
+    initials: "MQ"
     talk: "Inclusion, Development, and Human Flourishing"
     bio: "Fr. Michael brought the perspective of African communities and the Global South, highlighting the need to ensure that technological development serves all peoples rather than creating new forms of exclusion or dependency."
     photos:
       - /assets/events/may-24/quaicoe-1.jpg
   - name: "María Amparo Alonso Escobar"
+    initials: "AE"
     talk: "Ethical Artificial Intelligence for Human Development"
     bio: "Through a recorded message, María Amparo Alonso Escobar emphasized the importance of designing AI systems that actively promote human flourishing, education, and institutional accountability. Drawing on decades of international experience in governance, diplomacy, and social development, she argued that artificial intelligence must be intentionally oriented toward human development and the protection of human dignity."
   - name: "William H. Priest"
+    initials: "WP"
     talk: "Capital, Innovation, and Long-Term Responsibility"
     bio: "William Priest explored the relationship between technological innovation, economic systems, and social stability, arguing that markets and capital allocation ultimately require ethical frameworks if they are to contribute positively to human flourishing. Drawing upon decades of leadership in global finance and investment, he emphasized the importance of aligning technological innovation with long-term human well-being."
     photos:
       - /assets/events/may-24/priest-1.jpg
   - name: "Richard Sempier"
+    initials: "RS"
     talk: "Resilience, Preparedness, and Community Leadership"
     bio: "Richard Sempier brought to the gathering his extensive experience in resilience, preparedness, and community-based approaches to complex societal challenges. His contribution highlighted the importance of building communities capable not only of adapting to technological change but of understanding it, engaging with it, and responding to it responsibly."
   - name: "H.E. Mona Quartey"
+    initials: "MQ"
     talk: "International Cooperation and Africa's Digital Future"
     bio: "The presence of Her Excellency Mona Quartey, Ambassador of the Republic of Ghana to Italy, underscored the growing international relevance of the conversations taking place within the Human Communities Platform. Her participation highlighted the importance of ensuring that emerging discussions on artificial intelligence, human dignity, and human development remain inclusive of African perspectives and priorities."
     photos:
       - /assets/events/may-24/quartey-1.jpg
   - name: "Greetings from Peru — His Eminence Cardinal Carlos Castillo Mattasoglio"
+    initials: "CM"
     talk: "A Bond Between Communities Across Continents"
     bio: "The gathering was honored by greetings conveyed through Don Demetrio Francesco Quattrone on behalf of His Eminence Cardinal Carlos Castillo Mattasoglio, Archbishop of Lima. This gesture further emphasized the international ecclesial dimension of the initiative and the growing network of relationships connecting communities across Europe, Africa, North America, and Latin America."
 ---
