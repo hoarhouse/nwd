@@ -507,6 +507,10 @@ h1, h2, h3, h4 {
 }
 
 /* Library thumbnails */
+.library-thumb-btn[hidden] {
+  display: none;
+}
+
 .library-thumb-btn {
   display: block;
   margin: 0 0 1rem;
