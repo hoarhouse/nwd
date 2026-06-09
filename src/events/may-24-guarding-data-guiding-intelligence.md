@@ -10,11 +10,13 @@ locationUrl: "https://maps.google.com/?q=Parish+Santa+Maria+delle+Grazie+Via+Cas
 summary: "The Human Communities Platform entered its international phase, bringing Church leaders, technologists, Nobel leadership, and parish communities from five continents into one conversation on AI and human dignity."
 speakers:
   - name: "Dr. Alessio Pecorario"
+    headshot: /assets/team/pecorario.jpg
     talk: "Human Communities for the Common Good in the Digital Age"
     bio: "Opening the international gathering, Alessio Pecorario framed the event as the continuation and expansion of the process initiated on 7 May, connecting local communities, international partners, Church leaders, and technology innovators within a common reflection on artificial intelligence and human dignity. He emphasized that the emergence of artificial intelligence is not fundamentally a technological challenge, but an anthropological one, requiring communities themselves to become active participants in shaping the future rather than passive recipients of change."
     photos:
       - /assets/events/may-24/pecorario-1.jpg
   - name: "His Eminence Cardinal Silvano Maria Tomasi"
+    headshot: /assets/team/tomasi.jpg
     talk: "Peace, Human Dignity, and Artificial Intelligence"
     bio: "Cardinal Tomasi situated artificial intelligence within the broader horizon of humanity's existential challenges, drawing upon decades of experience in diplomacy, peacebuilding, and nuclear disarmament. His intervention highlighted the parallels between previous technological revolutions and today's AI transformation, emphasizing the need for ethical responsibility, prudence, and human-centered governance."
     photos:
@@ -25,6 +27,7 @@ speakers:
     photos:
       - /assets/events/may-24/muller-1.jpg
   - name: "Zoltan Papp"
+    headshot: /assets/team/pap.jpg
     talk: "Data Stewardship, Human Agency, and Values-Based Technology"
     bio: "Zoltan Papp presented the Foundation's vision for technologies designed to support participation, responsibility, transparency, and human-centered governance. His intervention focused on how communities and individuals can remain active participants in shaping their digital futures rather than passive recipients of technological decisions made elsewhere."
     photos:
