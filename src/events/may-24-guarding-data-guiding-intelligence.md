@@ -7,7 +7,8 @@ date: 2026-05-24
 eventTime: "4:00–6:00 PM (16:00–18:00)"
 location: "Parish of Santa Maria delle Grazie, Rome"
 locationUrl: "https://maps.google.com/?q=Parish+Santa+Maria+delle+Grazie+Via+Casal+Boccone+Rome+Italy"
-summary: "The Human Communities Platform entered its international phase, bringing Church leaders, technologists, Nobel leadership, and parish communities from five continents into one conversation on AI and human dignity."
+summary: "In Rome on 24 May, the Human Communities Platform went global — Cardinal Silvano Tomasi, physician and Nobel co-laureate James Muller, and voices from Italy, Hungary, the United States, Ghana, and Peru gathered in a parish hall to ask how artificial intelligence can remain in service of human dignity."
+cardImage: "/assets/events/may-24/pecorario-1.jpg"
 speakers:
   - name: "Dr. Alessio Pecorario"
     headshot: /assets/team/pecorario.jpg
