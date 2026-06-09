@@ -13,6 +13,7 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
   <li class="library-item">
     <h2 class="library-title">Value-Based AI and Catholic Teaching</h2>
     <p class="library-dek">How Catholic moral principles can shape the design and deployment of artificial intelligence.</p>
+    <button class="library-thumb-btn" type="button" data-pdf="/assets/library/value-based-ai-catholic-teaching.pdf"><img class="library-thumb" src="/assets/library/value-based-ai-catholic-teaching-thumb.png" alt="First slide preview" loading="lazy"></button>
     <div class="library-actions">
       <button class="btn-view" type="button" data-pdf="/assets/library/value-based-ai-catholic-teaching.pdf" aria-expanded="false">View slides</button>
       <a class="btn-dl" href="/assets/library/value-based-ai-catholic-teaching.pdf" download>Download PDF</a>
@@ -24,6 +25,7 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
   <li class="library-item">
     <h2 class="library-title">Sovereign Data, AI, and Catholic Social Teaching</h2>
     <p class="library-dek">Connecting data sovereignty and sovereign AI to the Church's social tradition.</p>
+    <button class="library-thumb-btn" type="button" data-pdf="/assets/library/sovereign-data-ai-catholic-social-teaching.pdf"><img class="library-thumb" src="/assets/library/sovereign-data-ai-catholic-social-teaching-thumb.png" alt="First slide preview" loading="lazy"></button>
     <div class="library-actions">
       <button class="btn-view" type="button" data-pdf="/assets/library/sovereign-data-ai-catholic-social-teaching.pdf" aria-expanded="false">View slides</button>
       <a class="btn-dl" href="/assets/library/sovereign-data-ai-catholic-social-teaching.pdf" download>Download PDF</a>
@@ -35,6 +37,7 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
   <li class="library-item">
     <h2 class="library-title">Valuing Sovereign Data</h2>
     <p class="library-dek">Why individual and collective data ownership matters in the AI economy.</p>
+    <button class="library-thumb-btn" type="button" data-pdf="/assets/library/valuing-sovereign-data.pdf"><img class="library-thumb" src="/assets/library/valuing-sovereign-data-thumb.png" alt="First slide preview" loading="lazy"></button>
     <div class="library-actions">
       <button class="btn-view" type="button" data-pdf="/assets/library/valuing-sovereign-data.pdf" aria-expanded="false">View slides</button>
       <a class="btn-dl" href="/assets/library/valuing-sovereign-data.pdf" download>Download PDF</a>
@@ -46,7 +49,7 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
 </ul>
 
 <script>
-  document.querySelectorAll('.btn-view').forEach(function (btn) {
+  document.querySelectorAll('.btn-view, .library-thumb-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.closest('.library-item');
       var viewer = item.querySelector('.library-viewer');
