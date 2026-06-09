@@ -355,7 +355,7 @@ h1, h2, h3, h4 {
 @media (max-width: 760px) { .concept-list { grid-template-columns: 1fr; } }
 .home-initiatives-lead { margin: 0 0 1.5rem; color: var(--color-muted); }
 .initiative-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
-.initiative-grid a { display: block; padding: 0.75rem 1rem; background: var(--color-surface, #faf8f2); border: 1px solid var(--color-rule); border-radius: 2px; text-align: center; text-decoration: none; color: var(--color-text); font-size: 0.95rem; transition: all 0.2s; }
+.initiative-grid a { display: block; padding: 0.7rem 0.9rem; background: var(--color-surface, #faf8f2); border-left: 2px solid var(--color-accent); border-radius: 2px; text-align: left; text-decoration: none; color: var(--color-text); font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.01em; transition: background 0.15s, color 0.15s; }
 .initiative-grid a:hover { background: var(--color-accent); color: white; border-color: var(--color-accent); }
 .home-initiatives-more { margin-top: 1.5rem; text-align: center; }
 .home-initiatives-more a { color: var(--color-accent); text-decoration: none; font-weight: 600; }
