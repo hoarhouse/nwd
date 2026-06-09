@@ -19,12 +19,19 @@ summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and valu
 {% if featuredEvent %}
 <section class="home-section">
   <h2 class="home-section-heading"><a href="/events/">Events</a></h2>
-  <a class="home-event" href="{{ featuredEvent.url }}">
-    <p class="home-event-label">{% if featuredIsPast %}Recent Event{% else %}Upcoming Event{% endif %}</p>
-    <p class="card-eventdate"><time datetime="{{ featuredEvent.data.date | isoDate }}">{{ featuredEvent.data.date | dateDisplay }}</time></p>
-    <h3 class="home-event-title">{{ featuredEvent.data.title }}</h3>
-    {% if featuredIsPast and featuredEvent.data.summary %}<p class="card-dek">{{ featuredEvent.data.summary }}</p>{% elif featuredEvent.data.subtitle %}<p class="card-dek">{{ featuredEvent.data.subtitle }}</p>{% endif %}
-  </a>
+  <ul class="card-list">
+    <li class="card">
+      <a class="card-link" href="{{ featuredEvent.url }}">
+        {% if featuredEvent.data.cardImage %}<div class="card-thumb"><img src="{{ featuredEvent.data.cardImage }}" alt=""></div>{% else %}<div class="card-thumb card-thumb-placeholder"></div>{% endif %}
+        <div class="card-text">
+          <p class="card-kicker">{% if featuredIsPast %}Recent Event{% else %}Upcoming Event{% endif %}</p>
+          <h3 class="card-title">{{ featuredEvent.data.title }}</h3>
+          {% if featuredIsPast and featuredEvent.data.summary %}<p class="card-dek">{{ featuredEvent.data.summary }}</p>{% elif featuredEvent.data.subtitle %}<p class="card-dek">{{ featuredEvent.data.subtitle }}</p>{% endif %}
+          <p class="card-meta"><time datetime="{{ featuredEvent.data.date | isoDate }}">{{ featuredEvent.data.date | dateDisplay }}</time></p>
+        </div>
+      </a>
+    </li>
+  </ul>
 </section>
 {% endif %}
 
