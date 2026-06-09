@@ -58,12 +58,16 @@ summary: "Presentations and resources from the Domus Communis Foundation on data
         viewer.hidden = true;
         viewer.innerHTML = '';
         btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = 'View slides';
+        if (btn.classList.contains('btn-view')) {
+          btn.textContent = 'View slides';
+        }
       } else {
         viewer.innerHTML = '<iframe class="library-frame" src="' + btn.dataset.pdf + '" title="' + item.querySelector('.library-title').textContent + '" loading="lazy"></iframe>';
         viewer.hidden = false;
         btn.setAttribute('aria-expanded', 'true');
-        btn.textContent = 'Hide slides';
+        if (btn.classList.contains('btn-view')) {
+          btn.textContent = 'Hide slides';
+        }
       }
     });
   });
