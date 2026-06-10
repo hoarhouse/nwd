@@ -83,13 +83,13 @@ bodyClass: article
       </div>
       {% else %}
       <div class="ab-member-grid">
-        {% for person in grp.people %}
+        {% for person in grp.people %}{% if person.name != "Cardinal Silvano Maria Tomasi" %}
         <div class="ab-member">
           {% if person.photo %}<img class="ab-avatar" src="{{ person.photo }}" alt="{{ person.name }}">{% else %}<div class="ab-avatar ab-avatar-initials">{{ person.initials }}</div>{% endif %}
           <p class="ab-member-name">{{ person.name }}</p>
           {% if person.role %}<p class="ab-member-role">{{ person.role }}</p>{% endif %}
         </div>
-        {% endfor %}
+        {% endif %}{% endfor %}
       </div>
       {% endif %}
     </div>
