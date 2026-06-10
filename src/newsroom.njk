@@ -2,47 +2,31 @@
 layout: base.njk
 title: Newsroom
 summary: Short updates and signals from the Domus Communis Foundation.
+bodyClass: newsroom
 ---
 <div class="section-head">
   <h1>Newsroom</h1>
   <p class="section-dek">Short updates, signals, and notes from the Foundation.</p>
 </div>
-<div class="feed">
+<div class="nf-feed">
 {% for post in collections.posts | reverse %}
-  <article class="feed-post">
-    <p class="feed-meta">
-      {% if post.data.date %}<time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time>{% endif %}
-    </p>
-    {% if post.data.title %}<h2 class="feed-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>{% endif %}
-    {% if post.data.gallery %}
-    <div class="gallery">
-      {% for img in post.data.gallery %}
-      <img class="gallery-item" src="{{ img }}" alt="">
-      {% endfor %}
-    </div>
-    {% elif post.data.embed %}
-    <div class="embed-wrap {% if post.data.orientation == 'vertical' %}embed-vertical{% else %}embed-landscape{% endif %}">
-      {% if post.data.embed == "youtube" %}
-      <iframe src="https://www.youtube-nocookie.com/embed/{{ post.data.embedId }}" title="{{ post.data.title or 'Embedded video' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {% elif post.data.embed == "vimeo" %}
-      <iframe src="https://player.vimeo.com/video/{{ post.data.embedId }}" title="{{ post.data.title or 'Embedded video' }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  {% set hasThumb = post.data.gallery or (post.data.embed == 'youtube') or (post.data.media and post.data.mediaType != 'video') or (post.data.media and post.data.poster) %}
+  <article class="nf-item{% if hasThumb %} nf-has-media{% endif %}">
+    {% if hasThumb %}
+    <a class="nf-media" href="{{ post.url }}">
+      {% if post.data.gallery %}<img src="{{ post.data.gallery[0] }}" alt="">
+      {% elif post.data.embed == 'youtube' %}<img src="https://img.youtube.com/vi/{{ post.data.embedId }}/hqdefault.jpg" alt="">
+      {% elif post.data.media and post.data.mediaType != 'video' %}<img src="{{ post.data.media }}" alt="">
+      {% elif post.data.poster %}<img src="{{ post.data.poster }}" alt="">
       {% endif %}
-    </div>
-    {% elif post.data.media %}
-    <div class="media">
-      {% if post.data.mediaType == "video" %}
-      <video class="media-item" controls preload="metadata"{% if post.data.poster %} poster="{{ post.data.poster }}"{% endif %}>
-        <source src="{{ post.data.media }}" type="video/mp4">
-      </video>
-      {% else %}
-      <img class="media-item" src="{{ post.data.media }}" alt="{{ post.data.mediaAlt or post.data.title or '' }}">
-      {% endif %}
-    </div>
+    </a>
     {% endif %}
-    <div class="feed-body">
-      {{ post.templateContent | safe }}
+    <div class="nf-text">
+      {% if post.data.date %}<p class="nf-date"><time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time></p>{% endif %}
+      {% if post.data.title %}<h2 class="nf-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>{% endif %}
+      <div class="nf-excerpt">{% if post.data.summary %}{{ post.data.summary }}{% else %}{{ post.templateContent | safe }}{% endif %}</div>
+      <p class="nf-more"><a href="{{ post.url }}">Read more →</a></p>
     </div>
-    <p class="feed-permalink"><a href="{{ post.url }}">Permalink</a></p>
   </article>
 {% endfor %}
 </div>

@@ -792,3 +792,60 @@ body.article .event-body { padding-top: 4rem; }
 .event-banner .event-banner-meta a { color: var(--accent-chrome); text-decoration: underline; text-underline-offset: 2px; }
 .event-banner .event-banner-cta { margin: 1.6rem 0 0; }
 .event-banner .event-banner-status { font-family: var(--font-sans); color: var(--chrome-muted); font-style: italic; font-size: 0.95rem; margin: 1rem 0 0; }
+
+/* =========================================================
+   LISTING PAGES — WRITING (feature + grid) & NEWSROOM (feed)
+   ========================================================= */
+body.writing main, body.newsroom main { max-width: none; margin: 0; padding: 0; }
+body.writing .section-head, body.newsroom .section-head { max-width: 1180px; margin: 0 auto 2.5rem; padding: 4rem 2rem 0; }
+body.writing .section-head h1, body.newsroom .section-head h1 { font-size: clamp(2.6rem, 5vw, 3.8rem); letter-spacing: -0.03em; line-height: 1; }
+
+/* WRITING — feature card */
+.wx-feature { display: block; max-width: 1180px; margin: 0 auto 3.5rem; padding: 0 2rem; text-decoration: none; color: inherit; }
+.wx-feature-thumb { position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; overflow: hidden; background: #1a1c22; }
+.wx-feature-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.wx-feature:hover .wx-feature-thumb img { transform: scale(1.03); }
+.wx-feature-text { padding: 1.6rem 0 0; max-width: 780px; }
+.wx-feature-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 0.7rem; color: var(--color-text); }
+.wx-feature-dek { font-size: 1.15rem; color: var(--color-muted); line-height: 1.5; margin: 0 0 0.7rem; }
+
+/* WRITING — grid */
+.wx-grid { list-style: none; margin: 0 auto; padding: 0 2rem 5rem; max-width: 1180px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.4rem 2rem; }
+.wx-card { transition: transform .3s ease; }
+.wx-card:hover { transform: translateY(-4px); }
+.wx-card-link { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.wx-thumb { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 8px; background: #e3ddd2; }
+.wx-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.wx-card:hover .wx-thumb img { transform: scale(1.05); }
+.wx-text { padding: 1.05rem 0.15rem 0; }
+.wx-kicker { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.5rem; }
+.wx-title { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.16; letter-spacing: -0.01em; margin: 0 0 0.5rem; color: var(--color-text); }
+.wx-dek { font-size: 0.96rem; color: var(--color-muted); line-height: 1.5; margin: 0 0 0.6rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.wx-meta { font-size: 0.8rem; color: var(--color-muted); margin: 0; }
+
+/* WRITING — dark type-card (image-less) */
+.wx-typethumb { display: flex; flex-direction: column; justify-content: flex-end; gap: 0.5rem; padding: 1.3rem; background: linear-gradient(150deg, #1d2230 0%, #14161d 60%, #0E0F13 100%); }
+.wx-type-label { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent-chrome); }
+.wx-type-title { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; line-height: 1.1; letter-spacing: -0.02em; color: rgba(255,255,255,0.94); }
+.wx-feature-thumb.wx-typethumb .wx-type-title { font-size: 2.4rem; }
+
+/* NEWSROOM — feed */
+.nf-feed { max-width: 900px; margin: 0 auto; padding: 0 2rem 5rem; }
+.nf-item { padding: 2.4rem 0; border-top: 1px solid var(--color-rule); display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+.nf-item:first-child { border-top: 0; padding-top: 0.5rem; }
+.nf-item.nf-has-media { grid-template-columns: 300px 1fr; gap: 1.8rem; align-items: start; }
+.nf-media { display: block; aspect-ratio: 16 / 10; border-radius: 6px; overflow: hidden; background: #e3ddd2; }
+.nf-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.nf-media:hover img { transform: scale(1.04); }
+.nf-date { font-family: var(--font-sans); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.5rem; }
+.nf-title { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; line-height: 1.14; letter-spacing: -0.01em; margin: 0 0 0.5rem; }
+.nf-title a { color: var(--color-text); text-decoration: none; }
+.nf-title a:hover { color: var(--color-accent); }
+.nf-excerpt { font-size: 1rem; color: var(--color-muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.nf-excerpt p { margin: 0 0 0.5rem; }
+.nf-more { margin: 0.7rem 0 0; }
+.nf-more a { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent); text-decoration: none; }
+
+@media (max-width: 640px) {
+  .nf-item.nf-has-media { grid-template-columns: 1fr; }
+}
