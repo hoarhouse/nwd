@@ -1,17 +1,15 @@
 ---
 layout: base.njk
+bodyClass: article
 ---
 <article class="essay">
-  {% if hero %}
-  <figure class="essay-hero">
-    <img src="{{ hero }}" alt="{{ title }}">
-  </figure>
-  {% endif %}
-  <header class="essay-header">
-    {% if publication or category %}<p class="essay-kicker">{% if publication %}<span class="essay-publication">{{ publication }}</span>{% endif %}{% if category %}<span class="essay-category">{{ category }}</span>{% endif %}</p>{% endif %}
-    <h1 class="essay-title">{{ title }}</h1>
-    {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
-    {% if author %}
+  <header class="essay-banner{% if not hero %} essay-banner-plain{% endif %}">
+    {% if hero %}<div class="essay-banner-bg"><img src="{{ hero }}" alt="{{ title }}"></div>{% endif %}
+    <div class="essay-banner-inner">
+      {% if publication or category %}<p class="essay-kicker">{% if publication %}<span class="essay-publication">{{ publication }}</span>{% endif %}{% if category %}<span class="essay-category">{{ category }}</span>{% endif %}</p>{% endif %}
+      <h1 class="essay-title">{{ title }}</h1>
+      {% if summary %}<p class="essay-dek">{{ summary }}</p>{% endif %}
+      {% if author %}
       <div class="essay-byline">
         {% if authorPhoto %}<img class="avatar" src="{{ authorPhoto }}" alt="{{ author }}">{% else %}<div class="avatar avatar-initials">{{ authorInitials }}</div>{% endif %}
         <div class="essay-byline-info">
@@ -20,6 +18,7 @@ layout: base.njk
         </div>
       </div>
       {% endif %}
+    </div>
   </header>
   <div class="essay-body">
     {{ content | safe }}
@@ -29,4 +28,5 @@ layout: base.njk
     {% for tag in tags %}{% if tag != "essays" %}<span class="tag">{{ tag }}</span>{% endif %}{% endfor %}
   </footer>
   {% endif %}
+  <div class="essay-backlink"><a href="/writing/">← All writing</a></div>
 </article>
