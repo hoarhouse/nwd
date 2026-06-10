@@ -1,59 +1,119 @@
 ---
 layout: base.njk
 title: false
+bodyClass: home
 summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and values-based technology for the common good."
 ---
-<section class="home-intro">
-  <p class="home-statement"><strong>Domus Communis Foundation</strong> is a global constellation of nonprofits dedicated to data sovereignty, sovereign AI, and values-based technology that serves humanity rather than the reverse. Guided by Catholic Social Teaching while serving people of all faiths, we connect technologists, civil society, academia, and faith leaders to shape a future where technology serves human dignity, peace, and the common good.</p>
+<section class="cine-hero">
+  <!-- To add a real hero image later, drop an <img> inside this div:
+       <div class="cine-hero-bg"><img src="/assets/home/hero.jpg" alt=""></div> -->
+  <div class="cine-wrap cine-hero-inner">
+    <p class="cine-eyebrow">A global, Catholic-inspired foundation</p>
+    <h1>A common home for <em>human-centered</em> technology.</h1>
+    <p class="cine-dek">We bring together technologists, scholars, Nobel laureates, and faith leaders to ensure AI and emerging technology serve human dignity, peace, and the common good.</p>
+    <div class="cine-cta-row">
+      <a class="cine-btn-solid" href="/about/">Explore our work</a>
+      <a class="cine-btn-text" href="/writing/">Read our writing →</a>
+    </div>
+  </div>
+  <div class="cine-scroll">Scroll<span></span></div>
 </section>
 
-<section class="home-section home-concepts">
-  <h2 class="home-section-heading">Key Concepts</h2>
-  <ul class="concept-list">
-    <li class="concept">
-      <h3 class="concept-title">Data Sovereignty</h3>
-      <p class="concept-text">Individuals and entities hold full rights over their data: access, control, sharing, and monetization. Ownership and value stay with the original data creators.</p>
-    </li>
-    <li class="concept">
-      <h3 class="concept-title">Sovereign AI</h3>
-      <p class="concept-text">AI architected to act for its human user — aligned to their values, following their commands, so autonomy stays with the person, not a third-party AI agent.</p>
-    </li>
-    <li class="concept">
-      <h3 class="concept-title">Value-Based AI Programming</h3>
-      <p class="concept-text">AI designed to carry human values at its core.</p>
-    </li>
-  </ul>
-  <p class="home-concepts-more"><a href="/about/">Learn more about our mission →</a></p>
+<section class="cine-manifesto">
+  <div class="cine-wrap cine-reveal">
+    <p class="cine-eyebrow">Our belief</p>
+    <p class="big">Technology should empower the human person — never <em>replace</em> them.</p>
+  </div>
 </section>
 
-<section class="home-section home-initiatives">
-  <h2 class="home-section-heading"><a href="/initiatives/">Initiatives</a></h2>
-  <p class="home-initiatives-lead">Eight programs advancing human-centered technology — across peacebuilding, education, research, regulation, and faith.</p>
-  <ul class="initiative-grid">
-    <li><a href="/initiatives/">Peace</a></li>
-    <li><a href="/initiatives/">Technology</a></li>
-    <li><a href="/initiatives/">Academia</a></li>
-    <li><a href="/initiatives/">Education</a></li>
-    <li><a href="/initiatives/">Mentorship</a></li>
-    <li><a href="/initiatives/">Research</a></li>
-    <li><a href="/initiatives/">Regulatory</a></li>
-    <li><a href="/initiatives/">Theology &amp; Philosophy</a></li>
-  </ul>
-  <p class="home-initiatives-more"><a href="/initiatives/">See all initiatives →</a></p>
+{% set latestEssay = null %}
+{% if collections.essays.length %}{% set latestEssay = (collections.essays | reverse)[0] %}{% endif %}
+{% if latestEssay %}
+<section class="cine-scene">
+  {% if latestEssay.data.hero %}<div class="cine-scene-bg"><img src="{{ latestEssay.data.hero }}" alt=""></div>{% endif %}
+  <div class="cine-wrap cine-scene-inner cine-reveal">
+    <p class="cine-eyebrow">Featured{% if latestEssay.data.category %} · {{ latestEssay.data.category }}{% endif %}</p>
+    <h2>{{ latestEssay.data.title }}</h2>
+    {% if latestEssay.data.summary %}<p>{{ latestEssay.data.summary }}</p>{% endif %}
+    <a class="cine-btn-text" href="{{ latestEssay.url }}">Read the essay →</a>
+  </div>
+</section>
+{% endif %}
+
+<section class="cine-band">
+  <div class="cine-wrap cine-reveal">
+    <div class="cine-band-head"><div><p class="cine-eyebrow">What we mean</p><h3>Key concepts</h3></div></div>
+    <div class="cine-concepts">
+      <div class="cine-concept">
+        <h4>Data Sovereignty</h4>
+        <p>Individuals and entities hold full rights over their data — access, control, sharing, and value. Ownership stays with the original data creators.</p>
+      </div>
+      <div class="cine-concept">
+        <h4>Sovereign AI</h4>
+        <p>AI architected to act for its human user — aligned to their values, following their commands — so autonomy stays with the person, not a third-party agent.</p>
+      </div>
+      <div class="cine-concept">
+        <h4>Value-Based AI Programming</h4>
+        <p>AI designed to carry human values at its core, woven into the system rather than added after the fact.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="home-section home-convene">
-  <h2 class="home-section-heading">Who We Convene</h2>
-  <p class="home-convene-lead">DCF bridges the worlds that must shape technology together.</p>
-  <ul class="convene-list">
-    <li>AI &amp; Technology Actors</li>
-    <li>Academia</li>
-    <li>Nobel Laureates</li>
-    <li>Faith Leaders</li>
-    <li>Civil Society</li>
-    <li>Institutions &amp; Governments</li>
-  </ul>
+<section class="cine-band">
+  <div class="cine-wrap cine-reveal">
+    <div class="cine-band-head">
+      <div><p class="cine-eyebrow">Our work</p><h3>Initiatives</h3></div>
+      <a href="/initiatives/">See all →</a>
+    </div>
+    <p class="cine-band-lead">Eight programs advancing human-centered technology — across peacebuilding, education, research, regulation, and faith.</p>
+    <ul class="cine-inits">
+      <li><a href="/initiatives/">Peace</a></li>
+      <li><a href="/initiatives/">Technology</a></li>
+      <li><a href="/initiatives/">Academia</a></li>
+      <li><a href="/initiatives/">Education</a></li>
+      <li><a href="/initiatives/">Mentorship</a></li>
+      <li><a href="/initiatives/">Research</a></li>
+      <li><a href="/initiatives/">Regulatory</a></li>
+      <li><a href="/initiatives/">Theology &amp; Philosophy</a></li>
+    </ul>
+  </div>
 </section>
+
+<section class="cine-band">
+  <div class="cine-wrap cine-reveal">
+    <div class="cine-band-head"><div><p class="cine-eyebrow">The table we set</p><h3>Who we convene</h3></div></div>
+    <p class="cine-band-lead">DCF bridges the worlds that must shape technology together.</p>
+    <ul class="cine-convene">
+      <li>AI &amp; Technology Actors</li>
+      <li>Academia</li>
+      <li>Nobel Laureates</li>
+      <li>Faith Leaders</li>
+      <li>Civil Society</li>
+      <li>Institutions &amp; Governments</li>
+    </ul>
+  </div>
+</section>
+
+{% if collections.essays.length %}
+<section class="cine-strip-sec">
+  <div class="cine-wrap cine-reveal">
+    <div class="cine-band-head">
+      <div><p class="cine-eyebrow">Insights</p><h3>Latest writing</h3></div>
+      <a href="/writing/">All writing →</a>
+    </div>
+  </div>
+  <div class="cine-strip cine-reveal">
+  {% for essay in (collections.essays | reverse).slice(1, 5) %}
+    <a class="cine-frame" href="{{ essay.url }}">
+      <div class="pic">{% if essay.data.hero %}<img src="{{ essay.data.hero }}" alt="">{% endif %}</div>
+      {% if essay.data.category %}<span class="k">{{ essay.data.category }}</span>{% endif %}
+      <h4>{{ essay.data.title }}</h4>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 {% set upcoming = [] %}
 {% set past = [] %}
@@ -65,55 +125,39 @@ summary: "Domus Communis Foundation — data sovereignty, sovereign AI, and valu
 {% if upcoming.length %}{% set featuredEvent = (upcoming | sort(false, false, "data.date"))[0] %}{% elif past.length %}{% set featuredEvent = (past | sort(true, false, "data.date"))[0] %}{% set featuredIsPast = true %}{% endif %}
 
 {% if featuredEvent %}
-<section class="home-section">
-  <h2 class="home-section-heading"><a href="/events/">Events</a></h2>
-  <ul class="card-list">
-    <li class="card">
-      <a class="card-link" href="{{ featuredEvent.url }}">
-        {% if featuredEvent.data.cardImage %}<div class="card-thumb"><img src="{{ featuredEvent.data.cardImage }}" alt=""></div>{% else %}<div class="card-thumb card-thumb-placeholder"></div>{% endif %}
-        <div class="card-text">
-          <p class="card-kicker">{% if featuredIsPast %}Recent Event{% else %}Upcoming Event{% endif %}</p>
-          <h3 class="card-title">{{ featuredEvent.data.title }}</h3>
-          {% if featuredIsPast and featuredEvent.data.summary %}<p class="card-dek">{{ featuredEvent.data.summary }}</p>{% elif featuredEvent.data.subtitle %}<p class="card-dek">{{ featuredEvent.data.subtitle }}</p>{% endif %}
-          <p class="card-meta"><time datetime="{{ featuredEvent.data.date | isoDate }}">{{ featuredEvent.data.date | dateDisplay }}</time></p>
-        </div>
-      </a>
-    </li>
-  </ul>
-</section>
-{% endif %}
-
-{% if collections.essays.length %}
-<section class="home-section">
-  <h2 class="home-section-heading"><a href="/writing/">Writing</a></h2>
-  <ul class="card-list">
-  {% for essay in (collections.essays | reverse).slice(0, 3) %}
-    <li class="card">
-      <a class="card-link" href="{{ essay.url }}">
-        {% if essay.data.hero %}<div class="card-thumb"><img src="{{ essay.data.hero }}" alt=""></div>{% else %}<div class="card-thumb card-thumb-placeholder"></div>{% endif %}
-        <div class="card-text">
-          {% if essay.data.category %}<p class="card-kicker">{{ essay.data.category }}</p>{% endif %}
-          <h3 class="card-title">{{ essay.data.title }}</h3>
-          {% if essay.data.summary %}<p class="card-dek">{{ essay.data.summary }}</p>{% endif %}
-          {% if essay.data.date %}<p class="card-meta"><time datetime="{{ essay.data.date | isoDate }}">{{ essay.data.date | dateDisplay }}</time></p>{% endif %}
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
+<section class="cine-scene">
+  {% if featuredEvent.data.cardImage %}<div class="cine-scene-bg"><img src="{{ featuredEvent.data.cardImage }}" alt=""></div>{% endif %}
+  <div class="cine-wrap cine-scene-inner cine-reveal">
+    <p class="cine-eyebrow">{% if featuredIsPast %}Recent event{% else %}Upcoming event{% endif %}</p>
+    <h2>{{ featuredEvent.data.title }}</h2>
+    {% if featuredIsPast and featuredEvent.data.summary %}<p>{{ featuredEvent.data.summary }}</p>{% elif featuredEvent.data.subtitle %}<p>{{ featuredEvent.data.subtitle }}</p>{% endif %}
+    <a class="cine-btn-text" href="{{ featuredEvent.url }}">View the event →</a>
+  </div>
 </section>
 {% endif %}
 
 {% if collections.posts.length %}
-<section class="home-section">
-  <h2 class="home-section-heading"><a href="/newsroom/">Newsroom</a></h2>
-  <ul class="home-news">
-  {% for post in (collections.posts | reverse).slice(0, 3) %}
-    <li class="home-news-item">
-      <p class="feed-meta">{% if post.data.date %}<time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time>{% endif %}</p>
-      {% if post.data.title %}<h3 class="home-news-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>{% else %}<p class="home-news-untitled"><a href="{{ post.url }}">{{ post.data.summary or "Read post →" }}</a></p>{% endif %}
-    </li>
-  {% endfor %}
-  </ul>
+<section class="cine-news">
+  <div class="cine-wrap cine-reveal">
+    <div class="cine-news-row">
+      <h3>Newsroom</h3>
+      <div>
+      {% for post in (collections.posts | reverse).slice(0, 3) %}
+        <a class="cine-ni" href="{{ post.url }}">
+          <p class="date">{% if post.data.date %}<time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | dateDisplay }}</time>{% endif %}</p>
+          <h4>{{ post.data.title or post.data.summary or "Read post →" }}</h4>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
 {% endif %}
+
+<section class="cine-cta">
+  <div class="cine-wrap cine-reveal">
+    <p class="cine-eyebrow">Join the movement</p>
+    <h2>Help ensure technology serves humanity.</h2>
+    <a class="cine-btn-solid" href="/about/">Explore our work</a>
+  </div>
+</section>
