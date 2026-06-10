@@ -770,3 +770,25 @@ body.article .essay-tags { max-width: 720px; margin: 3.5rem auto 0; padding-left
   .essay-banner-inner { padding-top: 6rem; }
   .essay-body > p:first-of-type::first-letter { font-size: 3.4rem; }
 }
+
+/* =========================================================
+   NEWSROOM POST  (refined light header)
+   ========================================================= */
+.np-header { margin-bottom: 1.6rem; }
+.np-kicker { font-family: var(--font-sans); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.9rem; }
+.np-title { font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 0.8rem; }
+.np-meta { margin: 0; }
+
+/* =========================================================
+   EVENT PAGE  (banner header, reuses .essay-banner)
+   ========================================================= */
+body.article .event-body,
+body.article .event-speakers,
+body.article .event-back { max-width: 720px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+body.article .event-body { padding-top: 4rem; }
+
+.event-banner .event-banner-partner { font-family: var(--font-sans); color: var(--chrome-muted); font-size: 0.95rem; margin: 0 0 1rem; }
+.event-banner .event-banner-meta { font-family: var(--font-sans); color: #DEDDD7; font-size: 1rem; margin: 0.3rem 0 0; }
+.event-banner .event-banner-meta a { color: var(--accent-chrome); text-decoration: underline; text-underline-offset: 2px; }
+.event-banner .event-banner-cta { margin: 1.6rem 0 0; }
+.event-banner .event-banner-status { font-family: var(--font-sans); color: var(--chrome-muted); font-style: italic; font-size: 0.95rem; margin: 1rem 0 0; }

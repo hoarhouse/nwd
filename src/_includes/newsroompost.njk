@@ -2,10 +2,11 @@
 layout: base.njk
 ---
 <article class="np">
-  <p class="np-meta">
-    {% if date %}<time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% endif %}
-  </p>
-  {% if title %}<h1 class="np-title">{{ title }}</h1>{% endif %}
+  <header class="np-header">
+    <p class="np-kicker">Newsroom</p>
+    {% if title %}<h1 class="np-title">{{ title }}</h1>{% endif %}
+    {% if date %}<p class="np-meta"><time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time></p>{% endif %}
+  </header>
   {% if gallery %}
   <div class="gallery">
     {% for img in gallery %}

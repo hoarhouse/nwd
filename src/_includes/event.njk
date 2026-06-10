@@ -1,33 +1,21 @@
 ---
 layout: base.njk
+bodyClass: article
 ---
 <article class="event">
-  {% if series %}<p class="event-series">{{ series }}</p>{% endif %}
-  {% if partner %}<p class="event-partner">{{ partner }}</p>{% endif %}
-  <header class="event-header">
-    <h1 class="event-title">{{ title }}</h1>
-    {% if subtitle %}<p class="event-subtitle">{{ subtitle }}</p>{% endif %}
-    <p class="event-when">
-      <time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>
-      {% if eventTime %}<span class="event-time">{{ eventTime }}</span>{% endif %}
-    </p>
-    {% if location %}
-    <p class="event-where">
-      {% if locationUrl %}<a href="{{ locationUrl }}">{{ location }}</a>{% else %}{{ location }}{% endif %}
-    </p>
-    {% endif %}
-    {% if registrationUrl %}
-    <p class="event-register">
-      <a class="button" href="{{ registrationUrl }}">Register</a>
-    </p>
-    {% endif %}
-    {% if date | isPast %}
-      {% if registrationUrl %}
-      <p class="event-status event-status-past">Registration for this event is closed.</p>
-      {% else %}
-      <p class="event-status event-status-past">This event has taken place. A recap follows below.</p>
-      {% endif %}
-    {% endif %}
+  <header class="essay-banner event-banner{% if not cardImage %} essay-banner-plain{% endif %}">
+    {% if cardImage %}<div class="essay-banner-bg"><img src="{{ cardImage }}" alt="{{ title }}"></div>{% endif %}
+    <div class="essay-banner-inner">
+      {% if series %}<p class="essay-kicker"><span class="essay-publication">{{ series }}</span></p>{% endif %}
+      <h1 class="essay-title">{{ title }}</h1>
+      {% if subtitle %}<p class="essay-dek">{{ subtitle }}</p>{% endif %}
+      {% if partner %}<p class="event-banner-partner">{{ partner }}</p>{% endif %}
+      <p class="event-banner-meta">
+        <time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time>{% if eventTime %} · {{ eventTime }}{% endif %}{% if location %} · {% if locationUrl %}<a href="{{ locationUrl }}">{{ location }}</a>{% else %}{{ location }}{% endif %}{% endif %}
+      </p>
+      {% if registrationUrl and not (date | isPast) %}<p class="event-banner-cta"><a class="cine-btn-solid" href="{{ registrationUrl }}">Register</a></p>{% endif %}
+      {% if date | isPast %}<p class="event-banner-status">{% if registrationUrl %}Registration for this event is closed.{% else %}This event has taken place — a recap follows below.{% endif %}</p>{% endif %}
+    </div>
   </header>
   <div class="event-body">
     {{ content | safe }}
