@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: Contact
+summary: "Get in touch with the Domus Communis Foundation team."
+bodyClass: article
+---
+<article class="contact">
+  <header class="essay-banner essay-banner-plain ct-banner">
+    <div class="essay-banner-inner">
+      <p class="essay-kicker"><span class="essay-publication">Contact</span></p>
+      <h1 class="essay-title">Get in touch</h1>
+      <p class="essay-dek">Questions, partnership inquiries, or media requests — we'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <div class="ct-wrap">
+    <div class="ct-grid">
+      <form class="ct-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="ct-hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <label class="ct-field"><span>Name</span><input type="text" name="name" required></label>
+        <label class="ct-field"><span>Email</span><input type="email" name="email" required></label>
+        <label class="ct-field"><span>Subject</span>
+          <select name="subject">
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Partnership">Partnership</option>
+            <option value="Donation">Donation</option>
+            <option value="Media">Media</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label class="ct-field"><span>Message</span><textarea name="message" rows="6" required></textarea></label>
+        <button class="ct-submit" type="submit">Send Message</button>
+      </form>
+
+      <aside class="ct-aside">
+        <p class="ct-aside-label">Email</p>
+        <a class="ct-email" href="mailto:alessio.pecorario@dcffoundation.org">alessio.pecorario@dcffoundation.org</a>
+        <p class="ct-aside-note">Domus Communis Foundation is a registered 501(c)(3) non-profit organization. We aim to respond to all inquiries promptly.</p>
+      </aside>
+    </div>
+  </div>
+</article>
