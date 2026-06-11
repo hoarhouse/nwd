@@ -1044,3 +1044,50 @@ html { scroll-behavior: smooth; }
 .ct-aside-note { font-size: 0.95rem; color: var(--color-muted); line-height: 1.6; margin-top: 1.5rem; }
 
 @media (max-width: 700px) { .ct-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+/* =========================================================
+   DONATE PAGE
+   ========================================================= */
+.dn-banner { min-height: 48vh; background: radial-gradient(90% 120% at 78% 18%, rgba(200,173,126,0.16) 0%, transparent 50%), radial-gradient(80% 100% at 12% 90%, rgba(138,106,47,0.18) 0%, transparent 55%), linear-gradient(160deg, #1a1d27 0%, #121420 55%, #0E0F13 100%); }
+.dn-banner .essay-banner-inner { max-width: 780px; }
+
+.dn-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 5.5rem; }
+.dn-form { display: block; }
+.dn-fieldset { border: none; margin: 0 0 2.5rem; padding: 0; }
+.dn-legend { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 1rem; padding: 0; }
+
+.dn-tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.dn-tier { position: relative; display: flex; flex-direction: column; gap: 0.25rem; padding: 1.4rem 1.5rem; border: 1.5px solid var(--color-rule); border-radius: 10px; cursor: pointer; background: #fff; transition: border-color .15s, box-shadow .15s, background .15s; }
+.dn-tier input { position: absolute; opacity: 0; width: 0; height: 0; }
+.dn-tier:hover { border-color: #c9bfa6; }
+.dn-tier:has(input:checked) { border-color: var(--color-accent); background: rgba(138,106,47,0.05); box-shadow: 0 0 0 1px var(--color-accent); }
+.dn-tier:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.dn-amt { font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.02em; color: var(--color-text); }
+.dn-tier-name { font-weight: 600; font-size: 0.95rem; color: var(--color-accent); }
+.dn-tier-desc { font-size: 0.9rem; color: var(--color-muted); line-height: 1.45; }
+
+.dn-custom { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding: 1rem 1.5rem; border: 1.5px solid var(--color-rule); border-radius: 10px; }
+.dn-custom-label { font-weight: 600; font-size: 0.95rem; color: var(--color-text); }
+.dn-custom-input { display: flex; align-items: center; gap: 0.3rem; }
+.dn-dollar { color: var(--color-muted); font-weight: 600; }
+.dn-custom-input input { width: 140px; font-family: var(--font-sans); font-size: 1rem; padding: 0.6rem 0.8rem; border: 1px solid var(--color-rule); border-radius: 6px; background: #fff; }
+.dn-custom-input input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; border-color: var(--color-accent); }
+
+.dn-freq { display: flex; gap: 0.8rem; }
+.dn-freq-opt { position: relative; cursor: pointer; }
+.dn-freq-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
+.dn-freq-opt span { display: inline-block; padding: 0.7rem 1.6rem; border: 1.5px solid var(--color-rule); border-radius: 999px; font-weight: 600; font-size: 0.95rem; color: var(--color-text); transition: all .15s; }
+.dn-freq-opt:has(input:checked) span { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+.dn-freq-opt:has(input:focus-visible) span { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.dn-submit { width: 100%; background: var(--color-accent); color: #fff; border: none; font-family: var(--font-sans); font-weight: 700; font-size: 1.1rem; padding: 1.1rem; border-radius: 8px; cursor: pointer; transition: background .2s; }
+.dn-submit:hover { background: #6f5526; }
+.dn-note { font-size: 0.9rem; color: var(--color-muted); margin-top: 1rem; text-align: center; }
+.dn-note a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.dn-tax { font-size: 0.85rem; color: var(--color-muted); line-height: 1.6; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
+
+@media (max-width: 560px) {
+  .dn-tiers { grid-template-columns: 1fr; }
+  .dn-custom { flex-direction: column; align-items: flex-start; }
+}

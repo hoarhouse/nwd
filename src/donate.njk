@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Donate
+summary: "Support the Domus Communis Foundation — your gift advances technology that serves human dignity."
+bodyClass: article
+---
+<article class="donate">
+  <header class="essay-banner essay-banner-plain dn-banner">
+    <div class="essay-banner-inner">
+      <p class="essay-kicker"><span class="essay-publication">Support Our Mission</span></p>
+      <h1 class="essay-title">Make a gift</h1>
+      <p class="essay-dek">Your donation directly funds our operations and initiatives advancing digital peace, data sovereignty, sovereign AI, and emerging technology that serves human dignity.</p>
+    </div>
+  </header>
+
+  <div class="dn-wrap">
+    <form class="dn-form" onsubmit="return false">
+      <fieldset class="dn-fieldset">
+        <legend class="dn-legend">Choose an amount</legend>
+        <div class="dn-tiers">
+          <label class="dn-tier">
+            <input type="radio" name="amount" value="50">
+            <span class="dn-amt">$50</span>
+            <span class="dn-tier-name">Supporter</span>
+            <span class="dn-tier-desc">Help fund educational resources and research materials</span>
+          </label>
+          <label class="dn-tier">
+            <input type="radio" name="amount" value="250">
+            <span class="dn-amt">$250</span>
+            <span class="dn-tier-name">Advocate</span>
+            <span class="dn-tier-desc">Support a workshop or training session</span>
+          </label>
+          <label class="dn-tier">
+            <input type="radio" name="amount" value="1000">
+            <span class="dn-amt">$1,000</span>
+            <span class="dn-tier-name">Partner</span>
+            <span class="dn-tier-desc">Fund a policy brief or research initiative</span>
+          </label>
+          <label class="dn-tier">
+            <input type="radio" name="amount" value="5000">
+            <span class="dn-amt">$5,000+</span>
+            <span class="dn-tier-name">Benefactor</span>
+            <span class="dn-tier-desc">Sponsor a program or initiative</span>
+          </label>
+        </div>
+        <label class="dn-custom">
+          <span class="dn-custom-label">Other amount</span>
+          <span class="dn-custom-input"><span class="dn-dollar">$</span><input type="number" name="custom" min="1" step="1" placeholder="Enter an amount"></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="dn-fieldset">
+        <legend class="dn-legend">Frequency</legend>
+        <div class="dn-freq">
+          <label class="dn-freq-opt"><input type="radio" name="frequency" value="one-time" checked><span>One-time</span></label>
+          <label class="dn-freq-opt"><input type="radio" name="frequency" value="monthly"><span>Monthly</span></label>
+        </div>
+      </fieldset>
+
+      <button class="dn-submit" type="button">Donate</button>
+      <p class="dn-note">Secure online giving via Stripe is being finalized. To make a gift today, please <a href="/contact/">contact us</a>.</p>
+    </form>
+
+    <p class="dn-tax">Domus Communis Foundation is a registered 501(c)(3) non-profit organization. Your donations are tax-deductible to the fullest extent allowed by law. EIN: 99-1778616.</p>
+  </div>
+</article>
