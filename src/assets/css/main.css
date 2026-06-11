@@ -1096,3 +1096,9 @@ html { scroll-behavior: smooth; }
 /* nav donate button */
 .site-nav .nav-donate { background: var(--accent-chrome); color: #1a1407; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 600; opacity: 1; transition: background .2s, color .2s; }
 .site-nav .nav-donate:hover { background: #d9c191; color: #1a1407; }
+
+
+/* Footer breathing room — guarantees space above the footer on all non-home pages.
+   Prevents page content from bumping flush against the footer (applies to every
+   current and future page except the cinematic full-bleed home). */
+body:not(.home) main { padding-bottom: 5rem; }
