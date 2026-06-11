@@ -1102,3 +1102,7 @@ html { scroll-behavior: smooth; }
    Prevents page content from bumping flush against the footer (applies to every
    current and future page except the cinematic full-bleed home). */
 body:not(.home) main { padding-bottom: 5rem; }
+
+
+/* Keep Jim Muller head in frame on the homepage recent-event band */
+.cine-scene-bg img[src*="muller-1"] { object-position: 50% 3%; }
