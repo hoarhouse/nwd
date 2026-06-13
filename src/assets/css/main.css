@@ -1153,3 +1153,13 @@ body.article .post-share { max-width: 720px; margin-left: auto; margin-right: au
   .psh-btn { padding: 0.55rem 0.75rem; }
   .psh-btn .lbl, .psh-copy-lbl { display: none; }
 }
+
+
+/* ===== LIBRARY VIEWER SHARE ROW ===== */
+.lib-share { display: flex; flex-wrap: nowrap; align-items: center; gap: 0.45rem; margin-bottom: 1rem; }
+.lib-share-label { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-right: 0.2rem; white-space: nowrap; }
+.lib-share .psh-btn { padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+@media (max-width: 640px) {
+  .lib-share { flex-wrap: wrap; }
+  .lib-share .psh-btn .lbl, .lib-share .lib-copy-lbl { display: none; }
+}
