@@ -28,5 +28,6 @@ bodyClass: article
     {% for tag in tags %}{% if tag != "essays" %}<span class="tag">{{ tag }}</span>{% endif %}{% endfor %}
   </footer>
   {% endif %}
+  {% include "share.njk" %}
   <div class="essay-backlink"><a href="/writing/">← All writing</a></div>
 </article>

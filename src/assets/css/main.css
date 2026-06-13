@@ -1135,3 +1135,21 @@ body:not(.home) main { padding-bottom: 5rem; }
   .nav-home { display: block !important; }
   .nav-toggle { position: fixed !important; top: 0.85rem !important; right: 1.25rem !important; z-index: 1002 !important; }
 }
+
+
+/* ===== POST SHARE ROW ===== */
+.post-share { margin-top: 3rem; padding-top: 1.8rem; border-top: 1px solid var(--color-rule); }
+body.article .post-share { max-width: 720px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+.post-share-label { font-family: var(--font-sans); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.9rem; }
+.post-share-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.psh-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid var(--color-rule); border-radius: 8px; padding: 0.6rem 1rem; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--color-text); cursor: pointer; text-decoration: none; transition: border-color .15s, color .15s, background .15s; }
+.psh-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.psh-btn svg { width: 18px; height: 18px; flex: none; }
+.psh-btn.psh-primary { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.psh-btn.psh-primary:hover { background: #6f5526; color: #fff; }
+.psh-btn.psh-copied { border-color: var(--color-accent); color: var(--color-accent); }
+@media (max-width: 520px) {
+  .post-share-row { gap: 0.5rem; }
+  .psh-btn { padding: 0.6rem 0.85rem; }
+  .psh-btn .lbl { display: none; }
+}
